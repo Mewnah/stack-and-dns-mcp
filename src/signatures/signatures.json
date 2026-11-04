@@ -1,0 +1,5414 @@
+{
+  "version": "2026.09.1",
+  "categories": {
+    "cms": "CMS",
+    "site-builder": "Site Builder",
+    "headless-cms": "Headless CMS",
+    "ssg": "Static Site Generator",
+    "ecommerce": "E-commerce Platform",
+    "shopify-app": "Shopify App",
+    "wordpress-plugin": "WordPress Plugin",
+    "wordpress-theme": "WordPress Theme / Builder",
+    "js-framework": "JavaScript Framework",
+    "web-framework": "Web Framework",
+    "ui-framework": "UI Framework",
+    "js-library": "JavaScript Library",
+    "build-tool": "Build Tool",
+    "programming-language": "Programming Language",
+    "web-server": "Web Server",
+    "cdn": "CDN",
+    "hosting": "Hosting / PaaS",
+    "waf": "WAF / Bot Protection",
+    "captcha": "CAPTCHA",
+    "analytics": "Web Analytics",
+    "product-analytics": "Product Analytics",
+    "tag-manager": "Tag Manager",
+    "session-replay": "Session Replay / Heatmaps",
+    "error-tracking": "Error Tracking / RUM",
+    "marketing-automation": "Marketing Automation",
+    "crm": "CRM",
+    "email-marketing": "Email Marketing",
+    "live-chat": "Live Chat",
+    "customer-support": "Customer Support",
+    "payments": "Payment Processor",
+    "subscription-billing": "Subscription Billing",
+    "bnpl": "Buy Now Pay Later",
+    "advertising": "Advertising / Pixels",
+    "affiliate": "Affiliate Marketing",
+    "ab-testing": "A/B Testing / Personalization",
+    "feature-flags": "Feature Flags",
+    "landing-pages": "Landing Page Builder",
+    "popups": "Popups / Lead Capture",
+    "onboarding": "Product Onboarding",
+    "consent-management": "Consent Management",
+    "forms": "Forms",
+    "scheduling": "Scheduling",
+    "video": "Video Hosting",
+    "fonts": "Font Service",
+    "maps": "Maps",
+    "search": "Site Search",
+    "reviews": "Reviews / UGC",
+    "auth": "Authentication",
+    "social": "Social Widgets",
+    "comments": "Comments",
+    "push-notifications": "Push Notifications",
+    "surveys": "Surveys / Feedback",
+    "abm": "ABM / Visitor Identification",
+    "sales-engagement": "Sales Engagement",
+    "referral": "Referral / Loyalty",
+    "documentation": "Documentation Platform",
+    "community": "Community / Forum",
+    "lms": "Course / LMS Platform",
+    "newsletter": "Newsletter Platform",
+    "media": "Image / Media Optimization",
+    "backend": "Backend as a Service",
+    "security": "Security / Compliance",
+    "accessibility": "Accessibility",
+    "demo": "Interactive Demos",
+    "status": "Status Page"
+  },
+  "signatures": [
+    {
+      "id": "wordpress",
+      "name": "WordPress",
+      "category": "cms",
+      "website": "https://wordpress.org",
+      "html": [
+        "/wp-content/",
+        "/wp-includes/",
+        "wp-json/"
+      ],
+      "meta": {
+        "generator": "^WordPress ?([\\d.]+)?\\;version:\\1"
+      },
+      "headers": {
+        "link": "wp-json"
+      }
+    },
+    {
+      "id": "drupal",
+      "name": "Drupal",
+      "category": "cms",
+      "website": "https://www.drupal.org",
+      "html": [
+        "/sites/(?:default|all)/files/",
+        "Drupal\\.settings",
+        "data-drupal-selector"
+      ],
+      "meta": {
+        "generator": "^Drupal ?([\\d.]+)?\\;version:\\1"
+      },
+      "headers": {
+        "x-generator": "^Drupal ?([\\d.]+)?\\;version:\\1",
+        "x-drupal-cache": ""
+      }
+    },
+    {
+      "id": "joomla",
+      "name": "Joomla",
+      "category": "cms",
+      "website": "https://www.joomla.org",
+      "html": [
+        "/media/jui/",
+        "/media/system/js/",
+        "option=com_"
+      ],
+      "meta": {
+        "generator": "^Joomla!? ?([\\d.]+)?\\;version:\\1"
+      }
+    },
+    {
+      "id": "ghost",
+      "name": "Ghost",
+      "category": "cms",
+      "website": "https://ghost.org",
+      "html": [
+        "/ghost/api/",
+        "ghost-sdk",
+        "public/cards\\.min\\.js"
+      ],
+      "meta": {
+        "generator": "^Ghost ?([\\d.]+)?\\;version:\\1"
+      }
+    },
+    {
+      "id": "craft-cms",
+      "name": "Craft CMS",
+      "category": "cms",
+      "website": "https://craftcms.com",
+      "headers": {
+        "x-powered-by": "Craft CMS"
+      },
+      "cookies": [
+        "CraftSessionId"
+      ]
+    },
+    {
+      "id": "sitecore",
+      "name": "Sitecore",
+      "category": "cms",
+      "website": "https://www.sitecore.com",
+      "html": [
+        "/-/media/",
+        "sitecore/",
+        "/layouts/system/"
+      ],
+      "cookies": [
+        "SC_ANALYTICS_GLOBAL_COOKIE"
+      ]
+    },
+    {
+      "id": "adobe-experience-manager",
+      "name": "Adobe Experience Manager",
+      "category": "cms",
+      "website": "https://business.adobe.com/products/experience-manager",
+      "html": [
+        "/etc\\.clientlibs/",
+        "/content/dam/",
+        "/etc/designs/"
+      ]
+    },
+    {
+      "id": "kentico",
+      "name": "Kentico",
+      "category": "cms",
+      "website": "https://www.kentico.com",
+      "html": [
+        "/CMSPages/",
+        "/CMSScripts/",
+        "kentico"
+      ],
+      "cookies": [
+        "CMSPreferredCulture"
+      ]
+    },
+    {
+      "id": "umbraco",
+      "name": "Umbraco",
+      "category": "cms",
+      "website": "https://umbraco.com",
+      "html": [
+        "/umbraco/",
+        "umbraco"
+      ],
+      "cookies": [
+        "UMB_UCONTEXT"
+      ]
+    },
+    {
+      "id": "typo3",
+      "name": "TYPO3",
+      "category": "cms",
+      "website": "https://typo3.org",
+      "html": [
+        "typo3temp/",
+        "typo3conf/"
+      ],
+      "meta": {
+        "generator": "^TYPO3"
+      }
+    },
+    {
+      "id": "sitefinity",
+      "name": "Progress Sitefinity",
+      "category": "cms",
+      "website": "https://www.progress.com/sitefinity-cms",
+      "html": [
+        "Telerik\\.Sitefinity",
+        "/Sitefinity/"
+      ]
+    },
+    {
+      "id": "optimizely-cms",
+      "name": "Optimizely CMS (Episerver)",
+      "category": "cms",
+      "website": "https://www.optimizely.com",
+      "html": [
+        "/episerver/",
+        "EPiServer",
+        "/util/login\\.aspx"
+      ],
+      "cookies": [
+        "EPiServerLogin"
+      ]
+    },
+    {
+      "id": "hubspot-cms",
+      "name": "HubSpot CMS",
+      "category": "cms",
+      "website": "https://www.hubspot.com/products/cms",
+      "html": [
+        "hs-sites\\.com",
+        "hubspotusercontent",
+        "hs_cos_wrapper",
+        "hsappstatic\\.net"
+      ],
+      "headers": {
+        "x-hs-cache-config": "",
+        "x-hs-hub-id": ""
+      },
+      "implies": [
+        "hubspot"
+      ]
+    },
+    {
+      "id": "webflow",
+      "name": "Webflow",
+      "category": "site-builder",
+      "website": "https://webflow.com",
+      "html": [
+        "data-wf-site=",
+        "assets\\.website-files\\.com",
+        "webflow\\.js"
+      ],
+      "meta": {
+        "generator": "^Webflow"
+      }
+    },
+    {
+      "id": "wix",
+      "name": "Wix",
+      "category": "site-builder",
+      "website": "https://www.wix.com",
+      "html": [
+        "static\\.parastorage\\.com",
+        "wixstatic\\.com",
+        "wix-code"
+      ],
+      "headers": {
+        "x-wix-request-id": ""
+      },
+      "meta": {
+        "generator": "^Wix\\.com"
+      }
+    },
+    {
+      "id": "squarespace",
+      "name": "Squarespace",
+      "category": "site-builder",
+      "website": "https://www.squarespace.com",
+      "html": [
+        "static1\\.squarespace\\.com",
+        "<!-- This is Squarespace\\. -->",
+        "squarespace\\.com/universal/"
+      ],
+      "cookies": [
+        "crumb"
+      ]
+    },
+    {
+      "id": "framer",
+      "name": "Framer",
+      "category": "site-builder",
+      "website": "https://www.framer.com",
+      "html": [
+        "framerusercontent\\.com",
+        "framer\\.website",
+        "data-framer-"
+      ],
+      "meta": {
+        "generator": "^Framer"
+      }
+    },
+    {
+      "id": "duda",
+      "name": "Duda",
+      "category": "site-builder",
+      "website": "https://www.duda.co",
+      "html": [
+        "irp\\.cdn-website\\.com",
+        "irp-cdn\\.multiscreensite\\.com",
+        "dudamobile",
+        "duda\\.co(?![a-z])"
+      ]
+    },
+    {
+      "id": "weebly",
+      "name": "Weebly",
+      "category": "site-builder",
+      "website": "https://www.weebly.com",
+      "html": [
+        "cdn2\\.editmysite\\.com",
+        "weebly\\.com"
+      ]
+    },
+    {
+      "id": "godaddy-website-builder",
+      "name": "GoDaddy Website Builder",
+      "category": "site-builder",
+      "website": "https://www.godaddy.com/websites/website-builder",
+      "html": [
+        "img1\\.wsimg\\.com",
+        "wsimg\\.com/blobby/",
+        "godaddy\\.com"
+      ]
+    },
+    {
+      "id": "bubble",
+      "name": "Bubble",
+      "category": "site-builder",
+      "website": "https://bubble.io",
+      "html": [
+        "bubble\\.io",
+        "bubbleapps\\.io",
+        "d1muf25xaso8hp\\.cloudfront\\.net"
+      ]
+    },
+    {
+      "id": "carrd",
+      "name": "Carrd",
+      "category": "site-builder",
+      "website": "https://carrd.co",
+      "html": [
+        "carrd\\.co(?![a-z])",
+        "<!-- Made with Carrd"
+      ]
+    },
+    {
+      "id": "strikingly",
+      "name": "Strikingly",
+      "category": "site-builder",
+      "website": "https://www.strikingly.com",
+      "html": [
+        "strikinglycdn\\.com",
+        "strikingly\\.com"
+      ]
+    },
+    {
+      "id": "clickfunnels",
+      "name": "ClickFunnels",
+      "category": "landing-pages",
+      "website": "https://www.clickfunnels.com",
+      "html": [
+        "clickfunnels\\.com",
+        "cf-cdn\\.clickfunnels",
+        "cfcdn\\."
+      ]
+    },
+    {
+      "id": "contentful",
+      "name": "Contentful",
+      "category": "headless-cms",
+      "website": "https://www.contentful.com",
+      "html": [
+        "images\\.ctfassets\\.net",
+        "cdn\\.contentful\\.com",
+        "assets\\.ctfassets\\.net"
+      ]
+    },
+    {
+      "id": "sanity",
+      "name": "Sanity",
+      "category": "headless-cms",
+      "website": "https://www.sanity.io",
+      "html": [
+        "cdn\\.sanity\\.io",
+        "sanity\\.io"
+      ]
+    },
+    {
+      "id": "storyblok",
+      "name": "Storyblok",
+      "category": "headless-cms",
+      "website": "https://www.storyblok.com",
+      "html": [
+        "a\\.storyblok\\.com",
+        "storyblok"
+      ]
+    },
+    {
+      "id": "prismic",
+      "name": "Prismic",
+      "category": "headless-cms",
+      "website": "https://prismic.io",
+      "html": [
+        "images\\.prismic\\.io",
+        "prismic\\.io",
+        "static\\.cdn\\.prismic\\.io"
+      ]
+    },
+    {
+      "id": "strapi",
+      "name": "Strapi",
+      "category": "headless-cms",
+      "website": "https://strapi.io",
+      "headers": {
+        "x-powered-by": "Strapi"
+      }
+    },
+    {
+      "id": "builder-io",
+      "name": "Builder.io",
+      "category": "headless-cms",
+      "website": "https://www.builder.io",
+      "html": [
+        "cdn\\.builder\\.io",
+        "builder-io"
+      ]
+    },
+    {
+      "id": "gatsby",
+      "name": "Gatsby",
+      "category": "ssg",
+      "website": "https://www.gatsbyjs.com",
+      "html": [
+        "id=\"___gatsby\"",
+        "/page-data/app-data\\.json",
+        "gatsby-"
+      ],
+      "implies": [
+        "react"
+      ]
+    },
+    {
+      "id": "hugo",
+      "name": "Hugo",
+      "category": "ssg",
+      "website": "https://gohugo.io",
+      "meta": {
+        "generator": "^Hugo ?([\\d.]+)?\\;version:\\1"
+      }
+    },
+    {
+      "id": "jekyll",
+      "name": "Jekyll",
+      "category": "ssg",
+      "website": "https://jekyllrb.com",
+      "meta": {
+        "generator": "^Jekyll ?v?([\\d.]+)?\\;version:\\1"
+      }
+    },
+    {
+      "id": "eleventy",
+      "name": "Eleventy",
+      "category": "ssg",
+      "website": "https://www.11ty.dev",
+      "meta": {
+        "generator": "^Eleventy ?v?([\\d.]+)?\\;version:\\1"
+      }
+    },
+    {
+      "id": "hexo",
+      "name": "Hexo",
+      "category": "ssg",
+      "website": "https://hexo.io",
+      "meta": {
+        "generator": "^Hexo ?([\\d.]+)?\\;version:\\1"
+      }
+    },
+    {
+      "id": "docusaurus",
+      "name": "Docusaurus",
+      "category": "documentation",
+      "website": "https://docusaurus.io",
+      "meta": {
+        "generator": "^Docusaurus ?v?([\\d.]+)?\\;version:\\1"
+      },
+      "html": [
+        "docusaurus"
+      ],
+      "implies": [
+        "react"
+      ]
+    },
+    {
+      "id": "gitbook",
+      "name": "GitBook",
+      "category": "documentation",
+      "website": "https://www.gitbook.com",
+      "html": [
+        "gitbook\\.com",
+        "static\\.gitbook\\.com",
+        "gitbook-"
+      ]
+    },
+    {
+      "id": "readme",
+      "name": "ReadMe",
+      "category": "documentation",
+      "website": "https://readme.com",
+      "html": [
+        "readme\\.io",
+        "readmeio",
+        "cdn\\.readme\\.io"
+      ]
+    },
+    {
+      "id": "mintlify",
+      "name": "Mintlify",
+      "category": "documentation",
+      "website": "https://mintlify.com",
+      "html": [
+        "mintlify",
+        "mintlify-assets"
+      ]
+    },
+    {
+      "id": "discourse",
+      "name": "Discourse",
+      "category": "community",
+      "website": "https://www.discourse.org",
+      "html": [
+        "discourse-",
+        "data-discourse-setup"
+      ],
+      "meta": {
+        "generator": "^Discourse ?([\\d.]+)?\\;version:\\1"
+      }
+    },
+    {
+      "id": "shopify",
+      "name": "Shopify",
+      "category": "ecommerce",
+      "website": "https://www.shopify.com",
+      "html": [
+        "cdn\\.shopify\\.com",
+        "Shopify\\.theme",
+        "shopify-section",
+        "myshopify\\.com",
+        "cdn/shopifycloud/"
+      ],
+      "headers": {
+        "x-shopify-stage": "",
+        "x-shopid": "",
+        "x-sorting-hat-shopid": ""
+      },
+      "cookies": [
+        "_shopify_y",
+        "_shopify_s",
+        "cart_currency"
+      ],
+      "meta": {
+        "generator": "^Shopify"
+      }
+    },
+    {
+      "id": "woocommerce",
+      "name": "WooCommerce",
+      "category": "ecommerce",
+      "website": "https://woocommerce.com",
+      "html": [
+        "/wp-content/plugins/woocommerce/",
+        "woocommerce",
+        "wc-add-to-cart"
+      ],
+      "meta": {
+        "generator": "^WooCommerce ?([\\d.]+)?\\;version:\\1"
+      },
+      "cookies": [
+        "woocommerce_cart_hash",
+        "woocommerce_items_in_cart"
+      ],
+      "implies": [
+        "wordpress"
+      ]
+    },
+    {
+      "id": "magento",
+      "name": "Magento (Adobe Commerce)",
+      "category": "ecommerce",
+      "website": "https://business.adobe.com/products/magento/magento-commerce.html",
+      "html": [
+        "/static/version\\d+/",
+        "Magento_",
+        "mage/cookies"
+      ],
+      "cookies": [
+        "mage-cache-storage",
+        "mage-messages",
+        "form_key"
+      ],
+      "headers": {
+        "x-magento-vary": "",
+        "x-magento-cache-debug": ""
+      }
+    },
+    {
+      "id": "bigcommerce",
+      "name": "BigCommerce",
+      "category": "ecommerce",
+      "website": "https://www.bigcommerce.com",
+      "html": [
+        "cdn\\d*\\.bigcommerce\\.com",
+        "bigcommerce\\.com",
+        "stencil-utils"
+      ],
+      "cookies": [
+        "SHOP_SESSION_TOKEN"
+      ]
+    },
+    {
+      "id": "salesforce-commerce-cloud",
+      "name": "Salesforce Commerce Cloud",
+      "category": "ecommerce",
+      "website": "https://www.salesforce.com/products/commerce-cloud/",
+      "html": [
+        "demandware\\.static",
+        "/on/demandware\\.store/",
+        "demandware\\.edgesuite"
+      ],
+      "cookies": [
+        "dwsid",
+        "dwanonymous_"
+      ]
+    },
+    {
+      "id": "prestashop",
+      "name": "PrestaShop",
+      "category": "ecommerce",
+      "website": "https://www.prestashop.com",
+      "html": [
+        "prestashop",
+        "/modules/ps_"
+      ],
+      "meta": {
+        "generator": "^PrestaShop"
+      },
+      "cookies": [
+        "PrestaShop-"
+      ]
+    },
+    {
+      "id": "opencart",
+      "name": "OpenCart",
+      "category": "ecommerce",
+      "website": "https://www.opencart.com",
+      "html": [
+        "route=common/home",
+        "catalog/view/theme",
+        "index\\.php\\?route="
+      ],
+      "cookies": [
+        "OCSESSID"
+      ]
+    },
+    {
+      "id": "shopware",
+      "name": "Shopware",
+      "category": "ecommerce",
+      "website": "https://www.shopware.com",
+      "html": [
+        "/bundles/storefront/",
+        "shopware",
+        "sw-context-token"
+      ],
+      "headers": {
+        "sw-context-token": "",
+        "sw-language-id": ""
+      }
+    },
+    {
+      "id": "ecwid",
+      "name": "Ecwid",
+      "category": "ecommerce",
+      "website": "https://www.ecwid.com",
+      "html": [
+        "app\\.ecwid\\.com",
+        "ecwid\\.com/script\\.js",
+        "ecwid"
+      ]
+    },
+    {
+      "id": "volusion",
+      "name": "Volusion",
+      "category": "ecommerce",
+      "website": "https://www.volusion.com",
+      "html": [
+        "volusion\\.com",
+        "/v/vspfiles/"
+      ]
+    },
+    {
+      "id": "shift4shop",
+      "name": "Shift4Shop (3dcart)",
+      "category": "ecommerce",
+      "website": "https://www.shift4shop.com",
+      "html": [
+        "3dcart",
+        "shift4shop",
+        "3dcartstores\\.com"
+      ]
+    },
+    {
+      "id": "snipcart",
+      "name": "Snipcart",
+      "category": "ecommerce",
+      "website": "https://snipcart.com",
+      "html": [
+        "cdn\\.snipcart\\.com",
+        "snipcart"
+      ]
+    },
+    {
+      "id": "gumroad",
+      "name": "Gumroad",
+      "category": "ecommerce",
+      "website": "https://gumroad.com",
+      "html": [
+        "gumroad\\.com/js/gumroad",
+        "gumroad\\.com"
+      ]
+    },
+    {
+      "id": "lemon-squeezy",
+      "name": "Lemon Squeezy",
+      "category": "subscription-billing",
+      "website": "https://www.lemonsqueezy.com",
+      "html": [
+        "lemonsqueezy\\.com",
+        "lmsqueezy\\.com"
+      ]
+    },
+    {
+      "id": "paddle",
+      "name": "Paddle",
+      "category": "subscription-billing",
+      "website": "https://www.paddle.com",
+      "html": [
+        "cdn\\.paddle\\.com",
+        "paddle\\.js",
+        "Paddle\\.Setup"
+      ]
+    },
+    {
+      "id": "chargebee",
+      "name": "Chargebee",
+      "category": "subscription-billing",
+      "website": "https://www.chargebee.com",
+      "html": [
+        "js\\.chargebee\\.com",
+        "chargebee"
+      ]
+    },
+    {
+      "id": "recurly",
+      "name": "Recurly",
+      "category": "subscription-billing",
+      "website": "https://recurly.com",
+      "html": [
+        "js\\.recurly\\.com",
+        "recurly\\.js"
+      ]
+    },
+    {
+      "id": "recharge",
+      "name": "Recharge",
+      "category": "shopify-app",
+      "website": "https://rechargepayments.com",
+      "html": [
+        "rechargepayments\\.com",
+        "static\\.rechargecdn\\.com",
+        "recharge-"
+      ],
+      "implies": [
+        "shopify"
+      ]
+    },
+    {
+      "id": "bold-commerce",
+      "name": "Bold Commerce",
+      "category": "shopify-app",
+      "website": "https://boldcommerce.com",
+      "html": [
+        "shop\\.boldapps\\.net",
+        "boldapps\\.net"
+      ]
+    },
+    {
+      "id": "yotpo",
+      "name": "Yotpo",
+      "category": "reviews",
+      "website": "https://www.yotpo.com",
+      "html": [
+        "staticw2\\.yotpo\\.com",
+        "cdn-widgetsrepository\\.yotpo\\.com",
+        "yotpo\\.com"
+      ]
+    },
+    {
+      "id": "judge-me",
+      "name": "Judge.me",
+      "category": "reviews",
+      "website": "https://judge.me",
+      "html": [
+        "cdn\\.judge\\.me",
+        "judge\\.me",
+        "jdgm-"
+      ]
+    },
+    {
+      "id": "loox",
+      "name": "Loox",
+      "category": "reviews",
+      "website": "https://loox.io",
+      "html": [
+        "loox\\.io",
+        "loox-"
+      ]
+    },
+    {
+      "id": "stamped",
+      "name": "Stamped.io",
+      "category": "reviews",
+      "website": "https://stamped.io",
+      "html": [
+        "cdn\\d*\\.stamped\\.io",
+        "stamped\\.io"
+      ]
+    },
+    {
+      "id": "okendo",
+      "name": "Okendo",
+      "category": "reviews",
+      "website": "https://www.okendo.io",
+      "html": [
+        "okendo\\.io",
+        "okeReviews",
+        "cdn-static\\.okendo\\.io"
+      ]
+    },
+    {
+      "id": "smile-io",
+      "name": "Smile.io",
+      "category": "referral",
+      "website": "https://smile.io",
+      "html": [
+        "cdn\\.smile\\.io",
+        "smile\\.io",
+        "js\\.smile\\.io"
+      ]
+    },
+    {
+      "id": "rebuy",
+      "name": "Rebuy",
+      "category": "shopify-app",
+      "website": "https://www.rebuyengine.com",
+      "html": [
+        "cdn\\.rebuyengine\\.com",
+        "rebuyengine"
+      ]
+    },
+    {
+      "id": "pagefly",
+      "name": "PageFly",
+      "category": "shopify-app",
+      "website": "https://pagefly.io",
+      "html": [
+        "pagefly"
+      ],
+      "confidence": 80
+    },
+    {
+      "id": "route",
+      "name": "Route",
+      "category": "shopify-app",
+      "website": "https://route.com",
+      "html": [
+        "cdn\\.routeapp\\.io",
+        "routeapp\\.io"
+      ]
+    },
+    {
+      "id": "triple-whale",
+      "name": "Triple Whale",
+      "category": "analytics",
+      "website": "https://www.triplewhale.com",
+      "html": [
+        "triplewhale",
+        "config\\.triplewhale\\.com"
+      ]
+    },
+    {
+      "id": "elevar",
+      "name": "Elevar",
+      "category": "tag-manager",
+      "website": "https://www.getelevar.com",
+      "html": [
+        "elevar",
+        "shopify-gtm-suite\\.getelevar\\.com"
+      ]
+    },
+    {
+      "id": "klarna",
+      "name": "Klarna",
+      "category": "bnpl",
+      "website": "https://www.klarna.com",
+      "html": [
+        "x\\.klarnacdn\\.net",
+        "klarna\\.com",
+        "klarnaservices\\.com"
+      ]
+    },
+    {
+      "id": "affirm",
+      "name": "Affirm",
+      "category": "bnpl",
+      "website": "https://www.affirm.com",
+      "html": [
+        "cdn1\\.affirm\\.com",
+        "affirm\\.com/js",
+        "affirm_config"
+      ]
+    },
+    {
+      "id": "afterpay",
+      "name": "Afterpay / Clearpay",
+      "category": "bnpl",
+      "website": "https://www.afterpay.com",
+      "html": [
+        "js\\.afterpay\\.com",
+        "portal\\.afterpay\\.com",
+        "clearpay\\.co\\.uk",
+        "afterpay"
+      ]
+    },
+    {
+      "id": "sezzle",
+      "name": "Sezzle",
+      "category": "bnpl",
+      "website": "https://sezzle.com",
+      "html": [
+        "widget\\.sezzle\\.com",
+        "sezzle"
+      ]
+    },
+    {
+      "id": "stripe",
+      "name": "Stripe",
+      "category": "payments",
+      "website": "https://stripe.com",
+      "html": [
+        "js\\.stripe\\.com",
+        "checkout\\.stripe\\.com",
+        "Stripe\\(\\s*['\"]pk_",
+        "buy\\.stripe\\.com"
+      ]
+    },
+    {
+      "id": "paypal",
+      "name": "PayPal",
+      "category": "payments",
+      "website": "https://www.paypal.com",
+      "html": [
+        "paypal\\.com/sdk/js",
+        "paypalobjects\\.com",
+        "paypal\\.com/cgi-bin/webscr"
+      ]
+    },
+    {
+      "id": "braintree",
+      "name": "Braintree",
+      "category": "payments",
+      "website": "https://www.braintreepayments.com",
+      "html": [
+        "js\\.braintreegateway\\.com",
+        "braintree-web"
+      ]
+    },
+    {
+      "id": "square",
+      "name": "Square",
+      "category": "payments",
+      "website": "https://squareup.com",
+      "html": [
+        "js\\.squareup\\.com",
+        "squarecdn\\.com",
+        "web\\.squarecdn\\.com"
+      ]
+    },
+    {
+      "id": "adyen",
+      "name": "Adyen",
+      "category": "payments",
+      "website": "https://www.adyen.com",
+      "html": [
+        "checkoutshopper-live\\.adyen\\.com",
+        "adyen\\.com",
+        "adyen-web"
+      ]
+    },
+    {
+      "id": "shop-pay",
+      "name": "Shop Pay",
+      "category": "payments",
+      "website": "https://shop.app",
+      "html": [
+        "shop\\.app/pay",
+        "shopifycloud\\.com/shop-js",
+        "shop-pay-button"
+      ],
+      "implies": [
+        "shopify"
+      ]
+    },
+    {
+      "id": "amazon-pay",
+      "name": "Amazon Pay",
+      "category": "payments",
+      "website": "https://pay.amazon.com",
+      "html": [
+        "static-na\\.payments-amazon\\.com",
+        "static-eu\\.payments-amazon\\.com",
+        "amazonpay"
+      ]
+    },
+    {
+      "id": "apple-pay",
+      "name": "Apple Pay",
+      "category": "payments",
+      "website": "https://www.apple.com/apple-pay/",
+      "html": [
+        "ApplePaySession",
+        "apple-pay-button"
+      ]
+    },
+    {
+      "id": "google-pay",
+      "name": "Google Pay",
+      "category": "payments",
+      "website": "https://pay.google.com",
+      "html": [
+        "pay\\.google\\.com/gp/p/js/pay\\.js",
+        "google\\.payments\\.api"
+      ]
+    },
+    {
+      "id": "mollie",
+      "name": "Mollie",
+      "category": "payments",
+      "website": "https://www.mollie.com",
+      "html": [
+        "js\\.mollie\\.com",
+        "mollie\\.com"
+      ]
+    },
+    {
+      "id": "razorpay",
+      "name": "Razorpay",
+      "category": "payments",
+      "website": "https://razorpay.com",
+      "html": [
+        "checkout\\.razorpay\\.com",
+        "razorpay"
+      ]
+    },
+    {
+      "id": "authorize-net",
+      "name": "Authorize.Net",
+      "category": "payments",
+      "website": "https://www.authorize.net",
+      "html": [
+        "js\\.authorize\\.net",
+        "AcceptUI",
+        "authorize\\.net"
+      ]
+    },
+    {
+      "id": "checkout-com",
+      "name": "Checkout.com",
+      "category": "payments",
+      "website": "https://www.checkout.com",
+      "html": [
+        "cdn\\.checkout\\.com",
+        "checkout\\.com/js"
+      ]
+    },
+    {
+      "id": "coinbase-commerce",
+      "name": "Coinbase Commerce",
+      "category": "payments",
+      "website": "https://commerce.coinbase.com",
+      "html": [
+        "commerce\\.coinbase\\.com"
+      ]
+    },
+    {
+      "id": "google-analytics",
+      "name": "Google Analytics (Universal)",
+      "category": "analytics",
+      "website": "https://analytics.google.com",
+      "html": [
+        "google-analytics\\.com/analytics\\.js",
+        "google-analytics\\.com/ga\\.js",
+        "ga\\(\\s*['\"]create['\"]",
+        "['\"]UA-\\d{4,}-\\d+['\"]"
+      ]
+    },
+    {
+      "id": "google-analytics-4",
+      "name": "Google Analytics 4",
+      "category": "analytics",
+      "website": "https://analytics.google.com",
+      "html": [
+        "googletagmanager\\.com/gtag/js\\?id=G-",
+        "gtag\\(\\s*['\"]config['\"]\\s*,\\s*['\"]G-",
+        "['\"]G-[A-Z0-9]{6,12}['\"]"
+      ]
+    },
+    {
+      "id": "google-tag-manager",
+      "name": "Google Tag Manager",
+      "category": "tag-manager",
+      "website": "https://tagmanager.google.com",
+      "html": [
+        "googletagmanager\\.com/gtm\\.js",
+        "googletagmanager\\.com/ns\\.html",
+        "['\"]GTM-[A-Z0-9]{4,10}['\"]"
+      ]
+    },
+    {
+      "id": "adobe-analytics",
+      "name": "Adobe Analytics",
+      "category": "analytics",
+      "website": "https://business.adobe.com/products/analytics/adobe-analytics.html",
+      "html": [
+        "AppMeasurement",
+        "s_code\\.js",
+        "omtrdc\\.net",
+        "2o7\\.net",
+        "s\\.trackingServer"
+      ]
+    },
+    {
+      "id": "adobe-experience-platform-tags",
+      "name": "Adobe Experience Platform Tags (Launch)",
+      "category": "tag-manager",
+      "website": "https://business.adobe.com/products/experience-platform/tags.html",
+      "html": [
+        "assets\\.adobedtm\\.com/[a-z0-9]+/[a-z0-9]+/launch-",
+        "assets\\.adobedtm\\.com"
+      ]
+    },
+    {
+      "id": "tealium",
+      "name": "Tealium",
+      "category": "tag-manager",
+      "website": "https://tealium.com",
+      "html": [
+        "tags\\.tiqcdn\\.com",
+        "utag\\.js",
+        "utag_data"
+      ]
+    },
+    {
+      "id": "segment",
+      "name": "Segment",
+      "category": "tag-manager",
+      "website": "https://segment.com",
+      "html": [
+        "cdn\\.segment\\.com/analytics\\.js",
+        "analytics\\.load\\(",
+        "segment\\.com/analytics\\.js",
+        "cdn\\.segment\\.io"
+      ]
+    },
+    {
+      "id": "rudderstack",
+      "name": "RudderStack",
+      "category": "tag-manager",
+      "website": "https://www.rudderstack.com",
+      "html": [
+        "cdn\\.rudderlabs\\.com",
+        "rudderanalytics",
+        "rudderstack"
+      ]
+    },
+    {
+      "id": "mparticle",
+      "name": "mParticle",
+      "category": "tag-manager",
+      "website": "https://www.mparticle.com",
+      "html": [
+        "jssdkcdns\\.mparticle\\.com",
+        "mParticle\\.init"
+      ]
+    },
+    {
+      "id": "cloudflare-zaraz",
+      "name": "Cloudflare Zaraz",
+      "category": "tag-manager",
+      "website": "https://www.cloudflare.com/products/zaraz/",
+      "html": [
+        "/cdn-cgi/zaraz/",
+        "zaraz\\.track"
+      ]
+    },
+    {
+      "id": "mixpanel",
+      "name": "Mixpanel",
+      "category": "product-analytics",
+      "website": "https://mixpanel.com",
+      "html": [
+        "cdn\\.mxpnl\\.com",
+        "mixpanel\\.init\\(",
+        "api-js\\.mixpanel\\.com"
+      ]
+    },
+    {
+      "id": "amplitude",
+      "name": "Amplitude",
+      "category": "product-analytics",
+      "website": "https://amplitude.com",
+      "html": [
+        "cdn\\.amplitude\\.com",
+        "amplitude\\.getInstance\\(",
+        "amplitude\\.init\\(",
+        "api\\.amplitude\\.com",
+        "cdn\\.eu\\.amplitude\\.com"
+      ]
+    },
+    {
+      "id": "heap",
+      "name": "Heap",
+      "category": "product-analytics",
+      "website": "https://www.heap.io",
+      "html": [
+        "heapanalytics\\.com",
+        "heap\\.load\\(",
+        "cdn\\.heapanalytics\\.com"
+      ]
+    },
+    {
+      "id": "posthog",
+      "name": "PostHog",
+      "category": "product-analytics",
+      "website": "https://posthog.com",
+      "html": [
+        "posthog\\.init\\(",
+        "app\\.posthog\\.com",
+        "us\\.i\\.posthog\\.com",
+        "eu\\.i\\.posthog\\.com",
+        "posthog\\.com/static"
+      ]
+    },
+    {
+      "id": "pendo",
+      "name": "Pendo",
+      "category": "product-analytics",
+      "website": "https://www.pendo.io",
+      "html": [
+        "cdn\\.pendo\\.io",
+        "pendo\\.initialize\\("
+      ]
+    },
+    {
+      "id": "kissmetrics",
+      "name": "Kissmetrics",
+      "category": "product-analytics",
+      "website": "https://www.kissmetrics.io",
+      "html": [
+        "i\\.kissmetrics\\.io",
+        "_kmq\\.push"
+      ]
+    },
+    {
+      "id": "hotjar",
+      "name": "Hotjar",
+      "category": "session-replay",
+      "website": "https://www.hotjar.com",
+      "html": [
+        "static\\.hotjar\\.com",
+        "hj\\(\\s*['\"]",
+        "hjid\\s*:"
+      ]
+    },
+    {
+      "id": "fullstory",
+      "name": "FullStory",
+      "category": "session-replay",
+      "website": "https://www.fullstory.com",
+      "html": [
+        "fullstory\\.com/s/fs\\.js",
+        "edge\\.fullstory\\.com",
+        "_fs_host",
+        "window\\['_fs_"
+      ]
+    },
+    {
+      "id": "microsoft-clarity",
+      "name": "Microsoft Clarity",
+      "category": "session-replay",
+      "website": "https://clarity.microsoft.com",
+      "html": [
+        "clarity\\.ms/tag/",
+        "clarity\\(\\s*['\"]"
+      ]
+    },
+    {
+      "id": "crazy-egg",
+      "name": "Crazy Egg",
+      "category": "session-replay",
+      "website": "https://www.crazyegg.com",
+      "html": [
+        "script\\.crazyegg\\.com"
+      ]
+    },
+    {
+      "id": "lucky-orange",
+      "name": "Lucky Orange",
+      "category": "session-replay",
+      "website": "https://www.luckyorange.com",
+      "html": [
+        "luckyorange\\.com",
+        "tools\\.luckyorange\\.com"
+      ]
+    },
+    {
+      "id": "mouseflow",
+      "name": "Mouseflow",
+      "category": "session-replay",
+      "website": "https://mouseflow.com",
+      "html": [
+        "cdn\\.mouseflow\\.com",
+        "_mfq\\.push"
+      ]
+    },
+    {
+      "id": "smartlook",
+      "name": "Smartlook",
+      "category": "session-replay",
+      "website": "https://www.smartlook.com",
+      "html": [
+        "rec\\.smartlook\\.com",
+        "web-sdk\\.smartlook\\.com",
+        "smartlook\\("
+      ]
+    },
+    {
+      "id": "logrocket",
+      "name": "LogRocket",
+      "category": "session-replay",
+      "website": "https://logrocket.com",
+      "html": [
+        "cdn\\.logrocket\\.io",
+        "cdn\\.lr-ingest\\.io",
+        "cdn\\.lr-in\\.com",
+        "LogRocket\\.init"
+      ]
+    },
+    {
+      "id": "matomo",
+      "name": "Matomo",
+      "category": "analytics",
+      "website": "https://matomo.org",
+      "html": [
+        "matomo\\.js",
+        "piwik\\.js",
+        "_paq\\.push",
+        "matomo\\.php"
+      ]
+    },
+    {
+      "id": "plausible",
+      "name": "Plausible Analytics",
+      "category": "analytics",
+      "website": "https://plausible.io",
+      "html": [
+        "plausible\\.io/js/",
+        "plausible\\.io/api/event"
+      ],
+      "scripts": [
+        "plausible\\.io/js/"
+      ]
+    },
+    {
+      "id": "fathom",
+      "name": "Fathom Analytics",
+      "category": "analytics",
+      "website": "https://usefathom.com",
+      "html": [
+        "cdn\\.usefathom\\.com",
+        "data-site=\"[A-Z0-9]{8}\""
+      ]
+    },
+    {
+      "id": "cloudflare-web-analytics",
+      "name": "Cloudflare Web Analytics",
+      "category": "analytics",
+      "website": "https://www.cloudflare.com/web-analytics/",
+      "html": [
+        "static\\.cloudflareinsights\\.com/beacon\\.min\\.js"
+      ]
+    },
+    {
+      "id": "vercel-analytics",
+      "name": "Vercel Analytics",
+      "category": "analytics",
+      "website": "https://vercel.com/analytics",
+      "html": [
+        "/_vercel/insights/script\\.js",
+        "va\\.vercel-scripts\\.com",
+        "/_vercel/speed-insights/"
+      ]
+    },
+    {
+      "id": "snowplow",
+      "name": "Snowplow",
+      "category": "analytics",
+      "website": "https://snowplow.io",
+      "html": [
+        "snowplow\\(\\s*['\"]newTracker['\"]",
+        "snowplowanalytics",
+        "/sp\\.js['\"]"
+      ]
+    },
+    {
+      "id": "piano-analytics",
+      "name": "Piano Analytics (AT Internet)",
+      "category": "analytics",
+      "website": "https://piano.io",
+      "html": [
+        "tag\\.aticdn\\.net",
+        "piano\\.io",
+        "pianoanalytics"
+      ]
+    },
+    {
+      "id": "woopra",
+      "name": "Woopra",
+      "category": "analytics",
+      "website": "https://www.woopra.com",
+      "html": [
+        "static\\.woopra\\.com",
+        "woopra\\.track"
+      ]
+    },
+    {
+      "id": "chartbeat",
+      "name": "Chartbeat",
+      "category": "analytics",
+      "website": "https://chartbeat.com",
+      "html": [
+        "static\\.chartbeat\\.com",
+        "_sf_async_config"
+      ]
+    },
+    {
+      "id": "quantcast",
+      "name": "Quantcast Measure",
+      "category": "analytics",
+      "website": "https://www.quantcast.com",
+      "html": [
+        "quantserve\\.com",
+        "_qevents\\.push"
+      ]
+    },
+    {
+      "id": "comscore",
+      "name": "comScore",
+      "category": "analytics",
+      "website": "https://www.comscore.com",
+      "html": [
+        "sb\\.scorecardresearch\\.com",
+        "_comscore"
+      ]
+    },
+    {
+      "id": "new-relic",
+      "name": "New Relic Browser",
+      "category": "error-tracking",
+      "website": "https://newrelic.com",
+      "html": [
+        "js-agent\\.newrelic\\.com",
+        "NREUM",
+        "bam\\.nr-data\\.net"
+      ]
+    },
+    {
+      "id": "datadog-rum",
+      "name": "Datadog RUM",
+      "category": "error-tracking",
+      "website": "https://www.datadoghq.com",
+      "html": [
+        "datadoghq-browser-agent\\.com",
+        "DD_RUM",
+        "datadog-rum"
+      ]
+    },
+    {
+      "id": "sentry",
+      "name": "Sentry",
+      "category": "error-tracking",
+      "website": "https://sentry.io",
+      "html": [
+        "browser\\.sentry-cdn\\.com",
+        "js\\.sentry-cdn\\.com",
+        "Sentry\\.init\\(",
+        "ingest\\.sentry\\.io",
+        "ingest\\.us\\.sentry\\.io"
+      ]
+    },
+    {
+      "id": "bugsnag",
+      "name": "Bugsnag",
+      "category": "error-tracking",
+      "website": "https://www.bugsnag.com",
+      "html": [
+        "d2wy8f7a9ursnm\\.cloudfront\\.net",
+        "bugsnag\\.start\\(",
+        "bugsnag\\.min\\.js",
+        "notify\\.bugsnag\\.com"
+      ]
+    },
+    {
+      "id": "rollbar",
+      "name": "Rollbar",
+      "category": "error-tracking",
+      "website": "https://rollbar.com",
+      "html": [
+        "cdn\\.rollbar\\.com",
+        "_rollbarConfig"
+      ]
+    },
+    {
+      "id": "raygun",
+      "name": "Raygun",
+      "category": "error-tracking",
+      "website": "https://raygun.com",
+      "html": [
+        "cdn\\.raygun\\.io",
+        "rg4js\\("
+      ]
+    },
+    {
+      "id": "hubspot",
+      "name": "HubSpot",
+      "category": "marketing-automation",
+      "website": "https://www.hubspot.com",
+      "html": [
+        "js\\.hs-scripts\\.com",
+        "js\\.hsforms\\.net",
+        "js\\.hs-analytics\\.net",
+        "hs-analytics\\.net",
+        "_hsq\\.push",
+        "js\\.hscollectedforms\\.net",
+        "js\\.hsadspixel\\.net",
+        "js\\.usemessages\\.com"
+      ],
+      "cookies": [
+        "__hstc",
+        "hubspotutk"
+      ]
+    },
+    {
+      "id": "marketo",
+      "name": "Marketo",
+      "category": "marketing-automation",
+      "website": "https://business.adobe.com/products/marketo/adobe-marketo.html",
+      "html": [
+        "munchkin\\.marketo\\.net",
+        "munchkin\\.js",
+        "Munchkin\\.init",
+        "mktoresp\\.com",
+        "mktoweb\\.com",
+        "//app-[a-z0-9]+\\.marketo\\.com"
+      ],
+      "cookies": [
+        "_mkto_trk"
+      ]
+    },
+    {
+      "id": "pardot",
+      "name": "Salesforce Pardot (Account Engagement)",
+      "category": "marketing-automation",
+      "website": "https://www.salesforce.com/products/marketing-cloud/marketing-automation/",
+      "html": [
+        "pi\\.pardot\\.com",
+        "pardot\\.com/pd\\.js",
+        "piAId\\s*=",
+        "go\\.pardot\\.com"
+      ],
+      "cookies": [
+        "visitor_id"
+      ]
+    },
+    {
+      "id": "salesforce",
+      "name": "Salesforce",
+      "category": "crm",
+      "website": "https://www.salesforce.com",
+      "html": [
+        "\\.force\\.com",
+        "salesforceliveagent\\.com",
+        "service\\.force\\.com/embeddedservice",
+        "salesforce\\.com/embeddedservice",
+        "web-to-lead",
+        "servlet\\.WebToLead"
+      ]
+    },
+    {
+      "id": "salesforce-marketing-cloud-personalization",
+      "name": "Salesforce Marketing Cloud Personalization",
+      "category": "ab-testing",
+      "website": "https://www.salesforce.com/products/marketing-cloud/personalization/",
+      "html": [
+        "cdn\\.evgnet\\.com",
+        "evergage"
+      ]
+    },
+    {
+      "id": "klaviyo",
+      "name": "Klaviyo",
+      "category": "email-marketing",
+      "website": "https://www.klaviyo.com",
+      "html": [
+        "static\\.klaviyo\\.com",
+        "klaviyo\\.js",
+        "_learnq",
+        "a\\.klaviyo\\.com",
+        "static-forms\\.klaviyo\\.com",
+        "klaviyo\\.com/onsite"
+      ]
+    },
+    {
+      "id": "mailchimp",
+      "name": "Mailchimp",
+      "category": "email-marketing",
+      "website": "https://mailchimp.com",
+      "html": [
+        "list-manage\\.com",
+        "chimpstatic\\.com/mcjs-connected",
+        "mailchimp\\.com",
+        "mc\\.us\\d+\\.list-manage"
+      ]
+    },
+    {
+      "id": "activecampaign",
+      "name": "ActiveCampaign",
+      "category": "marketing-automation",
+      "website": "https://www.activecampaign.com",
+      "html": [
+        "trackcmp\\.net",
+        "vgo\\(\\s*['\"]setAccount",
+        "activehosted\\.com",
+        "activecampaign\\.com"
+      ]
+    },
+    {
+      "id": "braze",
+      "name": "Braze",
+      "category": "marketing-automation",
+      "website": "https://www.braze.com",
+      "html": [
+        "js\\.appboycdn\\.com",
+        "appboy",
+        "braze\\.initialize",
+        "sdk\\.iad-\\d+\\.braze\\.com"
+      ]
+    },
+    {
+      "id": "iterable",
+      "name": "Iterable",
+      "category": "marketing-automation",
+      "website": "https://iterable.com",
+      "html": [
+        "api\\.iterable\\.com",
+        "links\\.iterable\\.com",
+        "iterable\\.com/web"
+      ]
+    },
+    {
+      "id": "customer-io",
+      "name": "Customer.io",
+      "category": "marketing-automation",
+      "website": "https://customer.io",
+      "html": [
+        "assets\\.customer\\.io",
+        "_cio\\.",
+        "customerioforms",
+        "track\\.customer\\.io"
+      ]
+    },
+    {
+      "id": "omnisend",
+      "name": "Omnisend",
+      "category": "email-marketing",
+      "website": "https://www.omnisend.com",
+      "html": [
+        "omnisnippet1\\.com",
+        "omnisend",
+        "omnisrc\\.com"
+      ]
+    },
+    {
+      "id": "attentive",
+      "name": "Attentive",
+      "category": "marketing-automation",
+      "website": "https://www.attentive.com",
+      "html": [
+        "cdn\\.attn\\.tv",
+        "attentivemobile",
+        "attn\\.tv"
+      ]
+    },
+    {
+      "id": "postscript",
+      "name": "Postscript",
+      "category": "marketing-automation",
+      "website": "https://postscript.io",
+      "html": [
+        "sdk\\.postscript\\.io",
+        "postscript\\.io"
+      ]
+    },
+    {
+      "id": "brevo",
+      "name": "Brevo (Sendinblue)",
+      "category": "email-marketing",
+      "website": "https://www.brevo.com",
+      "html": [
+        "sibautomation\\.com",
+        "sibforms\\.com",
+        "sendibt",
+        "sendinblue\\.com/js",
+        "assets\\.brevo\\.com"
+      ]
+    },
+    {
+      "id": "constant-contact",
+      "name": "Constant Contact",
+      "category": "email-marketing",
+      "website": "https://www.constantcontact.com",
+      "html": [
+        "ctctcdn\\.com",
+        "visitor\\.constantcontact",
+        "constantcontact\\.com/js"
+      ]
+    },
+    {
+      "id": "campaign-monitor",
+      "name": "Campaign Monitor",
+      "category": "email-marketing",
+      "website": "https://www.campaignmonitor.com",
+      "html": [
+        "createsend\\.com",
+        "createsend1\\.com"
+      ]
+    },
+    {
+      "id": "convertkit",
+      "name": "Kit (ConvertKit)",
+      "category": "email-marketing",
+      "website": "https://kit.com",
+      "html": [
+        "f\\.convertkit\\.com",
+        "ck\\.page",
+        "kit\\.com/forms",
+        "convertkit\\.com/commerce"
+      ]
+    },
+    {
+      "id": "mailerlite",
+      "name": "MailerLite",
+      "category": "email-marketing",
+      "website": "https://www.mailerlite.com",
+      "html": [
+        "assets\\.mlcdn\\.com",
+        "ml\\(\\s*['\"]account",
+        "static\\.mailerlite\\.com"
+      ]
+    },
+    {
+      "id": "ortto",
+      "name": "Ortto",
+      "category": "marketing-automation",
+      "website": "https://ortto.com",
+      "html": [
+        "cdn2l\\.ink",
+        "cdnl\\.ink",
+        "ortto\\.app"
+      ]
+    },
+    {
+      "id": "beehiiv",
+      "name": "beehiiv",
+      "category": "newsletter",
+      "website": "https://www.beehiiv.com",
+      "html": [
+        "embeds\\.beehiiv\\.com",
+        "\\.beehiiv\\.com/subscribe",
+        "beehiiv\\.com/embed"
+      ]
+    },
+    {
+      "id": "substack",
+      "name": "Substack",
+      "category": "newsletter",
+      "website": "https://substack.com",
+      "html": [
+        "substackcdn\\.com",
+        "substackapi\\.com",
+        "\\.substack\\.com/embed",
+        "substack\\.com/embed"
+      ]
+    },
+    {
+      "id": "intercom",
+      "name": "Intercom",
+      "category": "live-chat",
+      "website": "https://www.intercom.com",
+      "html": [
+        "widget\\.intercom\\.io",
+        "js\\.intercomcdn\\.com",
+        "intercomSettings",
+        "api-iam\\.intercom\\.io"
+      ]
+    },
+    {
+      "id": "drift",
+      "name": "Drift",
+      "category": "live-chat",
+      "website": "https://www.drift.com",
+      "html": [
+        "js\\.driftt\\.com",
+        "drift\\.load\\(",
+        "driftt\\.com"
+      ]
+    },
+    {
+      "id": "zendesk",
+      "name": "Zendesk",
+      "category": "customer-support",
+      "website": "https://www.zendesk.com",
+      "html": [
+        "static\\.zdassets\\.com",
+        "zendesk\\.com/embeddable",
+        "zE\\(\\s*['\"]",
+        "zopim\\.com",
+        "zdassets"
+      ]
+    },
+    {
+      "id": "freshworks",
+      "name": "Freshworks (Freshdesk / Freshchat)",
+      "category": "customer-support",
+      "website": "https://www.freshworks.com",
+      "html": [
+        "wchat\\.freshchat\\.com",
+        "freshdesk\\.com/widget",
+        "widget\\.freshworks\\.com",
+        "fw-cdn\\.com",
+        "euc-widget\\.freshworks\\.com"
+      ]
+    },
+    {
+      "id": "crisp",
+      "name": "Crisp",
+      "category": "live-chat",
+      "website": "https://crisp.chat",
+      "html": [
+        "client\\.crisp\\.chat",
+        "\\$crisp",
+        "CRISP_WEBSITE_ID"
+      ]
+    },
+    {
+      "id": "tawk-to",
+      "name": "tawk.to",
+      "category": "live-chat",
+      "website": "https://www.tawk.to",
+      "html": [
+        "embed\\.tawk\\.to",
+        "Tawk_API"
+      ]
+    },
+    {
+      "id": "livechat",
+      "name": "LiveChat",
+      "category": "live-chat",
+      "website": "https://www.livechat.com",
+      "html": [
+        "cdn\\.livechatinc\\.com",
+        "__lc\\.license",
+        "livechat\\.com/widget"
+      ]
+    },
+    {
+      "id": "olark",
+      "name": "Olark",
+      "category": "live-chat",
+      "website": "https://www.olark.com",
+      "html": [
+        "static\\.olark\\.com",
+        "olark\\.identify"
+      ]
+    },
+    {
+      "id": "tidio",
+      "name": "Tidio",
+      "category": "live-chat",
+      "website": "https://www.tidio.com",
+      "html": [
+        "code\\.tidio\\.co",
+        "tidio"
+      ]
+    },
+    {
+      "id": "gorgias",
+      "name": "Gorgias",
+      "category": "customer-support",
+      "website": "https://www.gorgias.com",
+      "html": [
+        "config\\.gorgias\\.chat",
+        "gorgias\\.chat",
+        "gorgias-chat"
+      ]
+    },
+    {
+      "id": "front-chat",
+      "name": "Front Chat",
+      "category": "live-chat",
+      "website": "https://front.com",
+      "html": [
+        "chat-assets\\.frontapp\\.com",
+        "FrontChat\\("
+      ]
+    },
+    {
+      "id": "help-scout",
+      "name": "Help Scout Beacon",
+      "category": "customer-support",
+      "website": "https://www.helpscout.com",
+      "html": [
+        "beacon-v2\\.helpscout\\.net",
+        "Beacon\\(\\s*['\"]init"
+      ]
+    },
+    {
+      "id": "kustomer",
+      "name": "Kustomer",
+      "category": "customer-support",
+      "website": "https://www.kustomer.com",
+      "html": [
+        "cdn\\.kustomerapp\\.com",
+        "kustomer"
+      ]
+    },
+    {
+      "id": "gladly",
+      "name": "Gladly",
+      "category": "customer-support",
+      "website": "https://www.gladly.com",
+      "html": [
+        "cdn\\.gladly\\.com",
+        "gladlyConfig"
+      ]
+    },
+    {
+      "id": "dixa",
+      "name": "Dixa",
+      "category": "customer-support",
+      "website": "https://www.dixa.com",
+      "html": [
+        "messenger\\.dixa\\.io",
+        "dixa\\.io"
+      ]
+    },
+    {
+      "id": "ada",
+      "name": "Ada",
+      "category": "live-chat",
+      "website": "https://www.ada.cx",
+      "html": [
+        "static\\.ada\\.support",
+        "adaSettings"
+      ]
+    },
+    {
+      "id": "qualified",
+      "name": "Qualified",
+      "category": "live-chat",
+      "website": "https://www.qualified.com",
+      "html": [
+        "js\\.qualified\\.com",
+        "qualified\\("
+      ]
+    },
+    {
+      "id": "zoho-salesiq",
+      "name": "Zoho SalesIQ",
+      "category": "live-chat",
+      "website": "https://www.zoho.com/salesiq/",
+      "html": [
+        "salesiq\\.zoho",
+        "zohocdn\\.com",
+        "\\$zoho\\.salesiq"
+      ]
+    },
+    {
+      "id": "pipedrive-leadbooster",
+      "name": "Pipedrive LeadBooster",
+      "category": "live-chat",
+      "website": "https://www.pipedrive.com",
+      "html": [
+        "leadbooster-chat\\.pipedrive\\.com",
+        "pipedriveassets\\.com"
+      ]
+    },
+    {
+      "id": "microsoft-dynamics-365",
+      "name": "Microsoft Dynamics 365",
+      "category": "crm",
+      "website": "https://dynamics.microsoft.com",
+      "html": [
+        "mktdplp\\d*cdn\\.azureedge\\.net",
+        "crm\\d*\\.dynamics\\.com",
+        "d365\\b"
+      ]
+    },
+    {
+      "id": "zoho-crm",
+      "name": "Zoho CRM",
+      "category": "crm",
+      "website": "https://www.zoho.com/crm/",
+      "html": [
+        "crm\\.zoho\\.com",
+        "zohopublic\\.com",
+        "crm\\.zoho\\.eu"
+      ]
+    },
+    {
+      "id": "6sense",
+      "name": "6sense",
+      "category": "abm",
+      "website": "https://6sense.com",
+      "html": [
+        "j\\.6sc\\.co",
+        "b\\.6sc\\.co",
+        "epsilon\\.6sense\\.com"
+      ]
+    },
+    {
+      "id": "demandbase",
+      "name": "Demandbase",
+      "category": "abm",
+      "website": "https://www.demandbase.com",
+      "html": [
+        "tag\\.demandbase\\.com",
+        "api\\.company-target\\.com",
+        "scripts\\.demandbase\\.com"
+      ]
+    },
+    {
+      "id": "clearbit",
+      "name": "Clearbit",
+      "category": "abm",
+      "website": "https://clearbit.com",
+      "html": [
+        "tag\\.clearbitscripts\\.com",
+        "reveal\\.clearbit\\.com",
+        "clearbit\\.com/v1"
+      ]
+    },
+    {
+      "id": "zoominfo",
+      "name": "ZoomInfo",
+      "category": "abm",
+      "website": "https://www.zoominfo.com",
+      "html": [
+        "ws\\.zoominfo\\.com",
+        "ziwebtracker",
+        "ws-assets\\.zoominfo\\.com"
+      ]
+    },
+    {
+      "id": "leadfeeder",
+      "name": "Leadfeeder (Dealfront)",
+      "category": "abm",
+      "website": "https://www.leadfeeder.com",
+      "html": [
+        "lftracker",
+        "leadfeeder",
+        "sc\\.lfeeder\\.com"
+      ]
+    },
+    {
+      "id": "albacross",
+      "name": "Albacross",
+      "category": "abm",
+      "website": "https://albacross.com",
+      "html": [
+        "serve\\.albacross\\.com",
+        "_nQc"
+      ]
+    },
+    {
+      "id": "apollo-io",
+      "name": "Apollo.io",
+      "category": "abm",
+      "website": "https://www.apollo.io",
+      "html": [
+        "assets\\.apollo\\.io/micro/website-tracker",
+        "apollo\\.io/micro"
+      ]
+    },
+    {
+      "id": "bombora",
+      "name": "Bombora",
+      "category": "abm",
+      "website": "https://bombora.com",
+      "html": [
+        "ml314\\.com",
+        "bombora"
+      ]
+    },
+    {
+      "id": "g2",
+      "name": "G2",
+      "category": "abm",
+      "website": "https://www.g2.com",
+      "html": [
+        "tracking\\.g2crowd\\.com",
+        "g2crowd\\.com",
+        "g2\\.com/products"
+      ]
+    },
+    {
+      "id": "mutiny",
+      "name": "Mutiny",
+      "category": "ab-testing",
+      "website": "https://www.mutinyhq.com",
+      "html": [
+        "client-registry\\.mutinycdn\\.com",
+        "mutinycdn"
+      ]
+    },
+    {
+      "id": "calendly",
+      "name": "Calendly",
+      "category": "scheduling",
+      "website": "https://calendly.com",
+      "html": [
+        "assets\\.calendly\\.com",
+        "calendly\\.com/"
+      ]
+    },
+    {
+      "id": "chili-piper",
+      "name": "Chili Piper",
+      "category": "scheduling",
+      "website": "https://www.chilipiper.com",
+      "html": [
+        "js\\.chilipiper\\.com",
+        "chilipiper\\.com"
+      ]
+    },
+    {
+      "id": "cal-com",
+      "name": "Cal.com",
+      "category": "scheduling",
+      "website": "https://cal.com",
+      "html": [
+        "app\\.cal\\.com/embed",
+        "cal\\.com/embed",
+        "Cal\\(\\s*['\"]init"
+      ]
+    },
+    {
+      "id": "acuity-scheduling",
+      "name": "Acuity Scheduling",
+      "category": "scheduling",
+      "website": "https://acuityscheduling.com",
+      "html": [
+        "acuityscheduling\\.com"
+      ]
+    },
+    {
+      "id": "typeform",
+      "name": "Typeform",
+      "category": "forms",
+      "website": "https://www.typeform.com",
+      "html": [
+        "embed\\.typeform\\.com",
+        "typeform\\.com/to/",
+        "data-tf-"
+      ]
+    },
+    {
+      "id": "jotform",
+      "name": "Jotform",
+      "category": "forms",
+      "website": "https://www.jotform.com",
+      "html": [
+        "form\\.jotform\\.com",
+        "jotfor\\.ms",
+        "cdn\\.jotfor\\.ms"
+      ]
+    },
+    {
+      "id": "gravity-forms",
+      "name": "Gravity Forms",
+      "category": "wordpress-plugin",
+      "website": "https://www.gravityforms.com",
+      "html": [
+        "/plugins/gravityforms/",
+        "gform_wrapper",
+        "gform_"
+      ],
+      "implies": [
+        "wordpress"
+      ]
+    },
+    {
+      "id": "contact-form-7",
+      "name": "Contact Form 7",
+      "category": "wordpress-plugin",
+      "website": "https://contactform7.com",
+      "html": [
+        "/plugins/contact-form-7/",
+        "wpcf7"
+      ],
+      "implies": [
+        "wordpress"
+      ]
+    },
+    {
+      "id": "wpforms",
+      "name": "WPForms",
+      "category": "wordpress-plugin",
+      "website": "https://wpforms.com",
+      "html": [
+        "/plugins/wpforms",
+        "wpforms-"
+      ],
+      "implies": [
+        "wordpress"
+      ]
+    },
+    {
+      "id": "wufoo",
+      "name": "Wufoo",
+      "category": "forms",
+      "website": "https://www.wufoo.com",
+      "html": [
+        "wufoo\\.com/forms",
+        "wufoo\\.com/scripts"
+      ]
+    },
+    {
+      "id": "formstack",
+      "name": "Formstack",
+      "category": "forms",
+      "website": "https://www.formstack.com",
+      "html": [
+        "formstack\\.com/forms",
+        "formstack\\.com"
+      ]
+    },
+    {
+      "id": "meta-pixel",
+      "name": "Meta Pixel (Facebook)",
+      "category": "advertising",
+      "website": "https://www.facebook.com/business/tools/meta-pixel",
+      "html": [
+        "connect\\.facebook\\.net/[a-z_A-Z]+/fbevents\\.js",
+        "fbq\\(\\s*['\"]init['\"]",
+        "facebook\\.com/tr\\?id="
+      ]
+    },
+    {
+      "id": "linkedin-insight-tag",
+      "name": "LinkedIn Insight Tag",
+      "category": "advertising",
+      "website": "https://business.linkedin.com/marketing-solutions/insight-tag",
+      "html": [
+        "snap\\.licdn\\.com/li\\.lms-analytics/insight\\.min\\.js",
+        "_linkedin_partner_id",
+        "px\\.ads\\.linkedin\\.com"
+      ]
+    },
+    {
+      "id": "x-pixel",
+      "name": "X (Twitter) Pixel",
+      "category": "advertising",
+      "website": "https://ads.x.com",
+      "html": [
+        "static\\.ads-twitter\\.com/uwt\\.js",
+        "twq\\(\\s*['\"](?:init|config)['\"]"
+      ]
+    },
+    {
+      "id": "tiktok-pixel",
+      "name": "TikTok Pixel",
+      "category": "advertising",
+      "website": "https://ads.tiktok.com",
+      "html": [
+        "analytics\\.tiktok\\.com/i18n/pixel",
+        "ttq\\.load\\(",
+        "ttq\\.page\\("
+      ]
+    },
+    {
+      "id": "pinterest-tag",
+      "name": "Pinterest Tag",
+      "category": "advertising",
+      "website": "https://ads.pinterest.com",
+      "html": [
+        "s\\.pinimg\\.com/ct/core\\.js",
+        "pintrk\\(\\s*['\"]load['\"]"
+      ]
+    },
+    {
+      "id": "snapchat-pixel",
+      "name": "Snap Pixel",
+      "category": "advertising",
+      "website": "https://forbusiness.snapchat.com",
+      "html": [
+        "sc-static\\.net/scevent\\.min\\.js",
+        "snaptr\\(\\s*['\"]init['\"]"
+      ]
+    },
+    {
+      "id": "google-ads",
+      "name": "Google Ads Conversion Tracking",
+      "category": "advertising",
+      "website": "https://ads.google.com",
+      "html": [
+        "googleadservices\\.com/pagead/conversion",
+        "gtag\\(\\s*['\"]config['\"]\\s*,\\s*['\"]AW-",
+        "googletagmanager\\.com/gtag/js\\?id=AW-",
+        "['\"]AW-\\d{6,12}['\"]"
+      ]
+    },
+    {
+      "id": "google-adsense",
+      "name": "Google AdSense",
+      "category": "advertising",
+      "website": "https://adsense.google.com",
+      "html": [
+        "pagead2\\.googlesyndication\\.com/pagead/js/adsbygoogle\\.js",
+        "adsbygoogle"
+      ]
+    },
+    {
+      "id": "google-marketing-platform",
+      "name": "Google Marketing Platform (DoubleClick)",
+      "category": "advertising",
+      "website": "https://marketingplatform.google.com",
+      "html": [
+        "fls\\.doubleclick\\.net",
+        "googletagmanager\\.com/gtag/js\\?id=DC-",
+        "doubleclick\\.net/activity",
+        "['\"]DC-\\d{6,12}['\"]"
+      ]
+    },
+    {
+      "id": "microsoft-advertising",
+      "name": "Microsoft Advertising UET",
+      "category": "advertising",
+      "website": "https://ads.microsoft.com",
+      "html": [
+        "bat\\.bing\\.com/bat\\.js",
+        "uetq\\.push",
+        "bat\\.bing\\.com/p/action"
+      ]
+    },
+    {
+      "id": "criteo",
+      "name": "Criteo",
+      "category": "advertising",
+      "website": "https://www.criteo.com",
+      "html": [
+        "static\\.criteo\\.net",
+        "dynamic\\.criteo\\.com",
+        "criteo_q"
+      ]
+    },
+    {
+      "id": "taboola",
+      "name": "Taboola",
+      "category": "advertising",
+      "website": "https://www.taboola.com",
+      "html": [
+        "cdn\\.taboola\\.com",
+        "_tfa\\.push"
+      ]
+    },
+    {
+      "id": "outbrain",
+      "name": "Outbrain",
+      "category": "advertising",
+      "website": "https://www.outbrain.com",
+      "html": [
+        "widgets\\.outbrain\\.com",
+        "amplify\\.outbrain\\.com",
+        "obApi\\("
+      ]
+    },
+    {
+      "id": "reddit-pixel",
+      "name": "Reddit Pixel",
+      "category": "advertising",
+      "website": "https://ads.reddit.com",
+      "html": [
+        "redditstatic\\.com/ads/pixel\\.js",
+        "rdt\\(\\s*['\"]init['\"]"
+      ]
+    },
+    {
+      "id": "quora-pixel",
+      "name": "Quora Pixel",
+      "category": "advertising",
+      "website": "https://www.quora.com/business",
+      "html": [
+        "a\\.quora\\.com/qevents\\.js",
+        "qp\\(\\s*['\"]init['\"]"
+      ]
+    },
+    {
+      "id": "adroll",
+      "name": "AdRoll",
+      "category": "advertising",
+      "website": "https://www.adroll.com",
+      "html": [
+        "s\\.adroll\\.com",
+        "adroll_adv_id"
+      ]
+    },
+    {
+      "id": "amazon-ads",
+      "name": "Amazon Ads",
+      "category": "advertising",
+      "website": "https://advertising.amazon.com",
+      "html": [
+        "amazon-adsystem\\.com",
+        "amzn\\(\\s*['\"](?:setRegion|trackEvent)"
+      ]
+    },
+    {
+      "id": "impact",
+      "name": "impact.com",
+      "category": "affiliate",
+      "website": "https://impact.com",
+      "html": [
+        "utt\\.impactcdn\\.com",
+        "impactcdn\\.com",
+        "impactradius"
+      ]
+    },
+    {
+      "id": "shareasale",
+      "name": "ShareASale",
+      "category": "affiliate",
+      "website": "https://www.shareasale.com",
+      "html": [
+        "shareasale\\.com",
+        "shareasale-analytics\\.com"
+      ]
+    },
+    {
+      "id": "refersion",
+      "name": "Refersion",
+      "category": "affiliate",
+      "website": "https://www.refersion.com",
+      "html": [
+        "refersion\\.com",
+        "cdn\\.refersion\\.com"
+      ]
+    },
+    {
+      "id": "partnerstack",
+      "name": "PartnerStack",
+      "category": "affiliate",
+      "website": "https://partnerstack.com",
+      "html": [
+        "partnerstack\\.com",
+        "growsumo"
+      ]
+    },
+    {
+      "id": "rewardful",
+      "name": "Rewardful",
+      "category": "affiliate",
+      "website": "https://www.rewardful.com",
+      "html": [
+        "r\\.wdfl\\.co",
+        "rewardful\\(\\s*['\"]"
+      ]
+    },
+    {
+      "id": "referralcandy",
+      "name": "ReferralCandy",
+      "category": "referral",
+      "website": "https://www.referralcandy.com",
+      "html": [
+        "referralcandy\\.com",
+        "portal\\.referralcandy"
+      ]
+    },
+    {
+      "id": "optimizely",
+      "name": "Optimizely Web Experimentation",
+      "category": "ab-testing",
+      "website": "https://www.optimizely.com",
+      "html": [
+        "cdn\\.optimizely\\.com",
+        "optimizely\\.com/js/",
+        "window\\.optimizely"
+      ]
+    },
+    {
+      "id": "vwo",
+      "name": "VWO",
+      "category": "ab-testing",
+      "website": "https://vwo.com",
+      "html": [
+        "dev\\.visualwebsiteoptimizer\\.com",
+        "_vwo_code",
+        "app\\.vwo\\.com"
+      ]
+    },
+    {
+      "id": "ab-tasty",
+      "name": "AB Tasty",
+      "category": "ab-testing",
+      "website": "https://www.abtasty.com",
+      "html": [
+        "try\\.abtasty\\.com",
+        "abtasty"
+      ]
+    },
+    {
+      "id": "adobe-target",
+      "name": "Adobe Target",
+      "category": "ab-testing",
+      "website": "https://business.adobe.com/products/target/adobe-target.html",
+      "html": [
+        "tt\\.omtrdc\\.net",
+        "(?:^|/)at\\.js\\b",
+        "mboxCreate",
+        "adobe\\.target",
+        "mboxDefine"
+      ]
+    },
+    {
+      "id": "convert",
+      "name": "Convert Experiences",
+      "category": "ab-testing",
+      "website": "https://www.convert.com",
+      "html": [
+        "cdn-\\d\\.convertexperiments\\.com",
+        "convertexperiments"
+      ]
+    },
+    {
+      "id": "dynamic-yield",
+      "name": "Dynamic Yield",
+      "category": "ab-testing",
+      "website": "https://www.dynamicyield.com",
+      "html": [
+        "cdn\\.dynamicyield\\.com",
+        "dynamicyield",
+        "DY\\.recommendationContext"
+      ]
+    },
+    {
+      "id": "kameleoon",
+      "name": "Kameleoon",
+      "category": "ab-testing",
+      "website": "https://www.kameleoon.com",
+      "html": [
+        "kameleoon\\.(?:eu|com)",
+        "kameleoonQueue"
+      ]
+    },
+    {
+      "id": "launchdarkly",
+      "name": "LaunchDarkly",
+      "category": "feature-flags",
+      "website": "https://launchdarkly.com",
+      "html": [
+        "clientsdk\\.launchdarkly\\.com",
+        "app\\.launchdarkly\\.com",
+        "launchdarkly",
+        "events\\.launchdarkly\\.com"
+      ]
+    },
+    {
+      "id": "split",
+      "name": "Split",
+      "category": "feature-flags",
+      "website": "https://www.split.io",
+      "html": [
+        "cdn\\.split\\.io",
+        "sdk\\.split\\.io",
+        "splitio"
+      ]
+    },
+    {
+      "id": "statsig",
+      "name": "Statsig",
+      "category": "feature-flags",
+      "website": "https://statsig.com",
+      "html": [
+        "statsig",
+        "featuregates\\.org",
+        "api\\.statsig\\.com"
+      ]
+    },
+    {
+      "id": "growthbook",
+      "name": "GrowthBook",
+      "category": "feature-flags",
+      "website": "https://www.growthbook.io",
+      "html": [
+        "cdn\\.growthbook\\.io",
+        "growthbook"
+      ]
+    },
+    {
+      "id": "unbounce",
+      "name": "Unbounce",
+      "category": "landing-pages",
+      "website": "https://unbounce.com",
+      "html": [
+        "assets\\.unbounce\\.com",
+        "ubembed\\.com",
+        "unbouncepages\\.com"
+      ]
+    },
+    {
+      "id": "instapage",
+      "name": "Instapage",
+      "category": "landing-pages",
+      "website": "https://instapage.com",
+      "html": [
+        "instapage\\.com",
+        "pageapp\\.instapage"
+      ]
+    },
+    {
+      "id": "leadpages",
+      "name": "Leadpages",
+      "category": "landing-pages",
+      "website": "https://www.leadpages.com",
+      "html": [
+        "leadpages\\.net",
+        "lpmodule",
+        "leadpages\\.com"
+      ]
+    },
+    {
+      "id": "hello-bar",
+      "name": "Hello Bar",
+      "category": "popups",
+      "website": "https://www.hellobar.com",
+      "html": [
+        "my\\.hellobar\\.com",
+        "hellobar\\.com/js"
+      ]
+    },
+    {
+      "id": "wisepops",
+      "name": "Wisepops",
+      "category": "popups",
+      "website": "https://wisepops.com",
+      "html": [
+        "wisepops\\.com",
+        "wisepops\\("
+      ]
+    },
+    {
+      "id": "privy",
+      "name": "Privy",
+      "category": "popups",
+      "website": "https://www.privy.com",
+      "html": [
+        "widget\\.privy\\.com",
+        "privy\\.com/js"
+      ]
+    },
+    {
+      "id": "justuno",
+      "name": "Justuno",
+      "category": "popups",
+      "website": "https://www.justuno.com",
+      "html": [
+        "cdn\\.justuno\\.com",
+        "justuno"
+      ]
+    },
+    {
+      "id": "optinmonster",
+      "name": "OptinMonster",
+      "category": "popups",
+      "website": "https://optinmonster.com",
+      "html": [
+        "a\\.omappapi\\.com",
+        "optinmonster",
+        "omapi"
+      ]
+    },
+    {
+      "id": "sumo",
+      "name": "Sumo",
+      "category": "popups",
+      "website": "https://sumo.com",
+      "html": [
+        "load\\.sumo\\.com",
+        "sumome",
+        "sumo\\.com/js"
+      ]
+    },
+    {
+      "id": "appcues",
+      "name": "Appcues",
+      "category": "onboarding",
+      "website": "https://www.appcues.com",
+      "html": [
+        "fast\\.appcues\\.com",
+        "Appcues\\.identify"
+      ]
+    },
+    {
+      "id": "userpilot",
+      "name": "Userpilot",
+      "category": "onboarding",
+      "website": "https://userpilot.com",
+      "html": [
+        "js\\.userpilot\\.io",
+        "userpilot"
+      ]
+    },
+    {
+      "id": "chameleon",
+      "name": "Chameleon",
+      "category": "onboarding",
+      "website": "https://www.chameleon.io",
+      "html": [
+        "fast\\.chameleon\\.io",
+        "trychameleon\\.com",
+        "chmln"
+      ]
+    },
+    {
+      "id": "walkme",
+      "name": "WalkMe",
+      "category": "onboarding",
+      "website": "https://www.walkme.com",
+      "html": [
+        "cdn\\.walkme\\.com",
+        "walkme\\.com",
+        "_walkMe"
+      ]
+    },
+    {
+      "id": "whatfix",
+      "name": "Whatfix",
+      "category": "onboarding",
+      "website": "https://whatfix.com",
+      "html": [
+        "whatfix\\.com",
+        "cdn\\.whatfix\\.com"
+      ]
+    },
+    {
+      "id": "userflow",
+      "name": "Userflow",
+      "category": "onboarding",
+      "website": "https://userflow.com",
+      "html": [
+        "js\\.userflow\\.com",
+        "userflow\\.init"
+      ]
+    },
+    {
+      "id": "navattic",
+      "name": "Navattic",
+      "category": "demo",
+      "website": "https://www.navattic.com",
+      "html": [
+        "navattic\\.com",
+        "capture\\.navattic\\.com"
+      ]
+    },
+    {
+      "id": "storylane",
+      "name": "Storylane",
+      "category": "demo",
+      "website": "https://www.storylane.io",
+      "html": [
+        "storylane\\.io",
+        "app\\.storylane\\.io"
+      ]
+    },
+    {
+      "id": "onetrust",
+      "name": "OneTrust",
+      "category": "consent-management",
+      "website": "https://www.onetrust.com",
+      "html": [
+        "cdn\\.cookielaw\\.org",
+        "otSDKStub",
+        "onetrust",
+        "cdn-ukwest\\.onetrust\\.com",
+        "cdn\\.cookielaw"
+      ],
+      "cookies": [
+        "OptanonConsent"
+      ]
+    },
+    {
+      "id": "cookiebot",
+      "name": "Cookiebot",
+      "category": "consent-management",
+      "website": "https://www.cookiebot.com",
+      "html": [
+        "consent\\.cookiebot\\.com",
+        "Cookiebot",
+        "consentcdn\\.cookiebot\\.com"
+      ],
+      "cookies": [
+        "CookieConsent"
+      ]
+    },
+    {
+      "id": "trustarc",
+      "name": "TrustArc",
+      "category": "consent-management",
+      "website": "https://trustarc.com",
+      "html": [
+        "consent\\.trustarc\\.com",
+        "truste\\.com",
+        "trustarc\\.com"
+      ],
+      "cookies": [
+        "notice_behavior",
+        "notice_gdpr_prefs"
+      ]
+    },
+    {
+      "id": "osano",
+      "name": "Osano",
+      "category": "consent-management",
+      "website": "https://www.osano.com",
+      "html": [
+        "cmp\\.osano\\.com",
+        "osano\\.com"
+      ]
+    },
+    {
+      "id": "cookieyes",
+      "name": "CookieYes",
+      "category": "consent-management",
+      "website": "https://www.cookieyes.com",
+      "html": [
+        "cdn-cookieyes\\.com",
+        "cookieyes"
+      ],
+      "cookies": [
+        "cookieyes-consent"
+      ]
+    },
+    {
+      "id": "termly",
+      "name": "Termly",
+      "category": "consent-management",
+      "website": "https://termly.io",
+      "html": [
+        "app\\.termly\\.io",
+        "termly\\.io"
+      ]
+    },
+    {
+      "id": "iubenda",
+      "name": "iubenda",
+      "category": "consent-management",
+      "website": "https://www.iubenda.com",
+      "html": [
+        "cdn\\.iubenda\\.com",
+        "iubenda\\.com",
+        "_iub\\.csConfiguration"
+      ]
+    },
+    {
+      "id": "usercentrics",
+      "name": "Usercentrics",
+      "category": "consent-management",
+      "website": "https://usercentrics.com",
+      "html": [
+        "app\\.usercentrics\\.eu",
+        "usercentrics",
+        "privacy-proxy\\.usercentrics\\.eu"
+      ]
+    },
+    {
+      "id": "didomi",
+      "name": "Didomi",
+      "category": "consent-management",
+      "website": "https://www.didomi.io",
+      "html": [
+        "sdk\\.privacy-center\\.org",
+        "didomi",
+        "didomiConfig"
+      ],
+      "cookies": [
+        "didomi_token"
+      ]
+    },
+    {
+      "id": "quantcast-choice",
+      "name": "Quantcast Choice",
+      "category": "consent-management",
+      "website": "https://www.quantcast.com/products/choice-consent-management-platform/",
+      "html": [
+        "quantcast\\.mgr\\.consensu\\.org",
+        "cmp\\.quantcast\\.com"
+      ]
+    },
+    {
+      "id": "axeptio",
+      "name": "Axeptio",
+      "category": "consent-management",
+      "website": "https://www.axeptio.eu",
+      "html": [
+        "static\\.axept\\.io",
+        "axeptio"
+      ]
+    },
+    {
+      "id": "klaro",
+      "name": "Klaro",
+      "category": "consent-management",
+      "website": "https://klaro.org",
+      "html": [
+        "klaro\\.js",
+        "klaroConfig",
+        "klaro\\.min"
+      ]
+    },
+    {
+      "id": "complianz",
+      "name": "Complianz",
+      "category": "wordpress-plugin",
+      "website": "https://complianz.io",
+      "html": [
+        "/plugins/complianz-gdpr/",
+        "cmplz-"
+      ],
+      "implies": [
+        "wordpress"
+      ]
+    },
+    {
+      "id": "react",
+      "name": "React",
+      "category": "js-framework",
+      "website": "https://react.dev",
+      "html": [
+        "data-reactroot",
+        "data-reactid",
+        "__reactContainer",
+        "react-dom(?:\\.production)?(?:\\.min)?\\.js",
+        "/react(?:\\.production)?(?:\\.min)?\\.js",
+        "__REACT_DEVTOOLS_GLOBAL_HOOK__",
+        "self\\.__next_f",
+        "\\$RC=function"
+      ]
+    },
+    {
+      "id": "nextjs",
+      "name": "Next.js",
+      "category": "web-framework",
+      "website": "https://nextjs.org",
+      "html": [
+        "__NEXT_DATA__",
+        "/_next/static/",
+        "self\\.__next_f",
+        "next/dist/"
+      ],
+      "headers": {
+        "x-powered-by": "^Next\\.js ?([\\d.]+)?\\;version:\\1",
+        "x-nextjs-cache": ""
+      },
+      "implies": [
+        "react"
+      ]
+    },
+    {
+      "id": "nuxt",
+      "name": "Nuxt",
+      "category": "web-framework",
+      "website": "https://nuxt.com",
+      "html": [
+        "window\\.__NUXT__",
+        "/_nuxt/",
+        "__nuxt",
+        "nuxt-loading"
+      ],
+      "implies": [
+        "vue"
+      ]
+    },
+    {
+      "id": "vue",
+      "name": "Vue.js",
+      "category": "js-framework",
+      "website": "https://vuejs.org",
+      "html": [
+        "data-v-[0-9a-f]{6,8}",
+        "vue(?:\\.runtime)?(?:\\.global)?(?:\\.prod)?(?:\\.min)?\\.js",
+        "data-server-rendered=\"true\"",
+        "__vue__",
+        "__VUE_PROD_DEVTOOLS__"
+      ]
+    },
+    {
+      "id": "angular",
+      "name": "Angular",
+      "category": "js-framework",
+      "website": "https://angular.dev",
+      "html": [
+        "ng-version=\"([\\d.]+)\"\\;version:\\1",
+        "ng-app",
+        "angular(?:\\.min)?\\.js",
+        "_nghost-",
+        "_ngcontent-"
+      ]
+    },
+    {
+      "id": "svelte",
+      "name": "Svelte",
+      "category": "js-framework",
+      "website": "https://svelte.dev",
+      "html": [
+        "svelte-[a-z0-9]{4,8}",
+        "class=\"svelte-",
+        "__svelte"
+      ]
+    },
+    {
+      "id": "sveltekit",
+      "name": "SvelteKit",
+      "category": "web-framework",
+      "website": "https://kit.svelte.dev",
+      "html": [
+        "__sveltekit",
+        "/_app/immutable/",
+        "data-sveltekit"
+      ],
+      "implies": [
+        "svelte"
+      ]
+    },
+    {
+      "id": "remix",
+      "name": "Remix",
+      "category": "web-framework",
+      "website": "https://remix.run",
+      "html": [
+        "__remixContext",
+        "__remixManifest",
+        "/build/_shared/chunk-",
+        "__remixRouteModules"
+      ],
+      "implies": [
+        "react"
+      ]
+    },
+    {
+      "id": "astro",
+      "name": "Astro",
+      "category": "web-framework",
+      "website": "https://astro.build",
+      "html": [
+        "astro-island",
+        "astro-slot",
+        "/_astro/",
+        "data-astro-"
+      ],
+      "meta": {
+        "generator": "^Astro ?v?([\\d.]+)?\\;version:\\1"
+      }
+    },
+    {
+      "id": "ember",
+      "name": "Ember.js",
+      "category": "js-framework",
+      "website": "https://emberjs.com",
+      "html": [
+        "ember(?:\\.prod|\\.min|\\.debug)?\\.js",
+        "Ember\\.Application",
+        "data-ember-extension",
+        "ember-cli"
+      ]
+    },
+    {
+      "id": "backbone",
+      "name": "Backbone.js",
+      "category": "js-framework",
+      "website": "https://backbonejs.org",
+      "html": [
+        "backbone(?:-min|\\.min)?\\.js",
+        "Backbone\\.View"
+      ]
+    },
+    {
+      "id": "jquery",
+      "name": "jQuery",
+      "category": "js-library",
+      "website": "https://jquery.com",
+      "html": [
+        "jquery[-.]([\\d.]+)(?:\\.min)?\\.js\\;version:\\1",
+        "jquery(?:\\.min)?\\.js",
+        "jquery/([\\d.]+)/jquery\\;version:\\1",
+        "jQuery\\(document\\)"
+      ]
+    },
+    {
+      "id": "jquery-ui",
+      "name": "jQuery UI",
+      "category": "js-library",
+      "website": "https://jqueryui.com",
+      "html": [
+        "jquery-ui(?:[-.]([\\d.]+))?(?:\\.min)?\\.js\\;version:\\1",
+        "jquery-ui\\.css",
+        "jqueryui/([\\d.]+)\\;version:\\1"
+      ],
+      "implies": [
+        "jquery"
+      ]
+    },
+    {
+      "id": "bootstrap",
+      "name": "Bootstrap",
+      "category": "ui-framework",
+      "website": "https://getbootstrap.com",
+      "html": [
+        "bootstrap(?:\\.bundle)?(?:\\.min)?\\.(?:js|css)",
+        "bootstrap/([\\d.]+)/\\;version:\\1",
+        "bootstrap@([\\d.]+)\\;version:\\1"
+      ]
+    },
+    {
+      "id": "tailwind-css",
+      "name": "Tailwind CSS",
+      "category": "ui-framework",
+      "website": "https://tailwindcss.com",
+      "html": [
+        "cdn\\.tailwindcss\\.com",
+        "tailwindcss",
+        "tailwind(?:\\.min)?\\.css",
+        "/\\*! tailwindcss v([\\d.]+)\\;version:\\1"
+      ]
+    },
+    {
+      "id": "material-ui",
+      "name": "MUI (Material UI)",
+      "category": "ui-framework",
+      "website": "https://mui.com",
+      "html": [
+        "MuiButton-root",
+        "MuiTypography",
+        "class=\"Mui",
+        "mui-[0-9a-z]+"
+      ],
+      "implies": [
+        "react"
+      ]
+    },
+    {
+      "id": "chakra-ui",
+      "name": "Chakra UI",
+      "category": "ui-framework",
+      "website": "https://chakra-ui.com",
+      "html": [
+        "chakra-ui",
+        "class=\"chakra-",
+        "chakra-portal"
+      ],
+      "implies": [
+        "react"
+      ]
+    },
+    {
+      "id": "ant-design",
+      "name": "Ant Design",
+      "category": "ui-framework",
+      "website": "https://ant.design",
+      "html": [
+        "class=\"ant-",
+        "antd(?:\\.min)?\\.(?:js|css)"
+      ],
+      "implies": [
+        "react"
+      ]
+    },
+    {
+      "id": "bulma",
+      "name": "Bulma",
+      "category": "ui-framework",
+      "website": "https://bulma.io",
+      "html": [
+        "bulma(?:\\.min)?\\.css",
+        "bulma@([\\d.]+)\\;version:\\1"
+      ]
+    },
+    {
+      "id": "foundation",
+      "name": "Foundation",
+      "category": "ui-framework",
+      "website": "https://get.foundation",
+      "html": [
+        "foundation(?:\\.min)?\\.(?:js|css)",
+        "foundation-sites"
+      ]
+    },
+    {
+      "id": "alpine-js",
+      "name": "Alpine.js",
+      "category": "js-framework",
+      "website": "https://alpinejs.dev",
+      "html": [
+        "x-data=",
+        "alpinejs",
+        "alpine(?:\\.min)?\\.js",
+        "alpinejs@([\\d.]+)\\;version:\\1"
+      ]
+    },
+    {
+      "id": "htmx",
+      "name": "htmx",
+      "category": "js-library",
+      "website": "https://htmx.org",
+      "html": [
+        "htmx\\.org",
+        "hx-(?:get|post|trigger|target|swap)=",
+        "htmx(?:\\.min)?\\.js",
+        "htmx\\.org@([\\d.]+)\\;version:\\1"
+      ]
+    },
+    {
+      "id": "lodash",
+      "name": "Lodash",
+      "category": "js-library",
+      "website": "https://lodash.com",
+      "html": [
+        "lodash(?:\\.min)?\\.js",
+        "lodash@([\\d.]+)\\;version:\\1",
+        "lodash\\.js/([\\d.]+)\\;version:\\1"
+      ]
+    },
+    {
+      "id": "moment-js",
+      "name": "Moment.js",
+      "category": "js-library",
+      "website": "https://momentjs.com",
+      "html": [
+        "moment(?:\\.min)?\\.js",
+        "moment\\.js/([\\d.]+)\\;version:\\1",
+        "moment-with-locales"
+      ]
+    },
+    {
+      "id": "gsap",
+      "name": "GSAP",
+      "category": "js-library",
+      "website": "https://gsap.com",
+      "html": [
+        "gsap(?:\\.min)?\\.js",
+        "gsap/([\\d.]+)/\\;version:\\1",
+        "TweenMax",
+        "ScrollTrigger"
+      ]
+    },
+    {
+      "id": "three-js",
+      "name": "Three.js",
+      "category": "js-library",
+      "website": "https://threejs.org",
+      "html": [
+        "three(?:\\.min|\\.module)?\\.js",
+        "three@([\\d.]+)\\;version:\\1",
+        "THREE\\.WebGLRenderer"
+      ]
+    },
+    {
+      "id": "d3",
+      "name": "D3.js",
+      "category": "js-library",
+      "website": "https://d3js.org",
+      "html": [
+        "d3(?:\\.min)?\\.js",
+        "d3\\.v(\\d+)(?:\\.min)?\\.js\\;version:\\1",
+        "d3@([\\d.]+)\\;version:\\1"
+      ]
+    },
+    {
+      "id": "chart-js",
+      "name": "Chart.js",
+      "category": "js-library",
+      "website": "https://www.chartjs.org",
+      "html": [
+        "(?:^|/)chart(?:\\.umd|\\.min)?\\.js",
+        "Chart\\.js/([\\d.]+)\\;version:\\1",
+        "chart\\.js@([\\d.]+)\\;version:\\1"
+      ]
+    },
+    {
+      "id": "swiper",
+      "name": "Swiper",
+      "category": "js-library",
+      "website": "https://swiperjs.com",
+      "html": [
+        "swiper-bundle(?:\\.min)?\\.(?:js|css)",
+        "swiper@([\\d.]+)\\;version:\\1",
+        "class=\"swiper"
+      ]
+    },
+    {
+      "id": "slick",
+      "name": "Slick Carousel",
+      "category": "js-library",
+      "website": "https://kenwheeler.github.io/slick/",
+      "html": [
+        "(?:^|/)slick(?:\\.min)?\\.js",
+        "slick-carousel",
+        "(?:^|/)slick\\.css"
+      ],
+      "implies": [
+        "jquery"
+      ]
+    },
+    {
+      "id": "font-awesome",
+      "name": "Font Awesome",
+      "category": "fonts",
+      "website": "https://fontawesome.com",
+      "html": [
+        "font-awesome",
+        "fontawesome",
+        "kit\\.fontawesome\\.com",
+        "use\\.fontawesome\\.com"
+      ]
+    },
+    {
+      "id": "google-fonts",
+      "name": "Google Fonts",
+      "category": "fonts",
+      "website": "https://fonts.google.com",
+      "html": [
+        "fonts\\.googleapis\\.com",
+        "fonts\\.gstatic\\.com"
+      ]
+    },
+    {
+      "id": "adobe-fonts",
+      "name": "Adobe Fonts (Typekit)",
+      "category": "fonts",
+      "website": "https://fonts.adobe.com",
+      "html": [
+        "use\\.typekit\\.net",
+        "typekit\\.com",
+        "p\\.typekit\\.net"
+      ]
+    },
+    {
+      "id": "lottie",
+      "name": "Lottie",
+      "category": "js-library",
+      "website": "https://lottiefiles.com",
+      "html": [
+        "lottie-player",
+        "lottie(?:\\.min)?\\.js",
+        "lottiefiles\\.com",
+        "dotlottie"
+      ]
+    },
+    {
+      "id": "webpack",
+      "name": "webpack",
+      "category": "build-tool",
+      "website": "https://webpack.js.org",
+      "html": [
+        "webpackJsonp",
+        "webpackChunk",
+        "__webpack_require__"
+      ]
+    },
+    {
+      "id": "vite",
+      "name": "Vite",
+      "category": "build-tool",
+      "website": "https://vitejs.dev",
+      "html": [
+        "/@vite/client",
+        "vite/modulepreload-polyfill",
+        "data-vite-"
+      ]
+    },
+    {
+      "id": "hotwire-turbo",
+      "name": "Hotwire Turbo",
+      "category": "js-library",
+      "website": "https://turbo.hotwired.dev",
+      "html": [
+        "@hotwired/turbo",
+        "data-turbo",
+        "turbo(?:\\.es2017-esm|\\.min)?\\.js"
+      ]
+    },
+    {
+      "id": "stimulus",
+      "name": "Stimulus",
+      "category": "js-library",
+      "website": "https://stimulus.hotwired.dev",
+      "html": [
+        "@hotwired/stimulus",
+        "data-controller=",
+        "stimulus(?:\\.min)?\\.js"
+      ]
+    },
+    {
+      "id": "ruby-on-rails",
+      "name": "Ruby on Rails",
+      "category": "web-framework",
+      "website": "https://rubyonrails.org",
+      "html": [
+        "name=\"csrf-param\" content=\"authenticity_token\"",
+        "authenticity_token",
+        "data-turbolinks-track"
+      ],
+      "headers": {
+        "x-powered-by": "Phusion Passenger",
+        "x-rack-cache": ""
+      },
+      "cookies": [
+        "_rails_session",
+        "_session_id"
+      ]
+    },
+    {
+      "id": "laravel",
+      "name": "Laravel",
+      "category": "web-framework",
+      "website": "https://laravel.com",
+      "cookies": [
+        "laravel_session",
+        "XSRF-TOKEN"
+      ],
+      "html": [
+        "livewire",
+        "/livewire/"
+      ],
+      "implies": [
+        "php"
+      ]
+    },
+    {
+      "id": "livewire",
+      "name": "Livewire",
+      "category": "js-framework",
+      "website": "https://livewire.laravel.com",
+      "html": [
+        "/livewire/livewire\\.js",
+        "wire:snapshot",
+        "wire:id"
+      ],
+      "implies": [
+        "laravel"
+      ]
+    },
+    {
+      "id": "django",
+      "name": "Django",
+      "category": "web-framework",
+      "website": "https://www.djangoproject.com",
+      "cookies": [
+        "csrftoken",
+        "django_language",
+        "sessionid"
+      ],
+      "html": [
+        "csrfmiddlewaretoken",
+        "/static/admin/"
+      ]
+    },
+    {
+      "id": "asp-net",
+      "name": "ASP.NET",
+      "category": "web-framework",
+      "website": "https://dotnet.microsoft.com/apps/aspnet",
+      "html": [
+        "__VIEWSTATE",
+        "__EVENTVALIDATION",
+        "/WebResource\\.axd",
+        "/ScriptResource\\.axd"
+      ],
+      "headers": {
+        "x-aspnet-version": "^([\\d.]+)\\;version:\\1",
+        "x-powered-by": "ASP\\.NET",
+        "x-aspnetmvc-version": ""
+      },
+      "cookies": [
+        "ASP.NET_SessionId",
+        ".AspNetCore.Antiforgery"
+      ]
+    },
+    {
+      "id": "blazor",
+      "name": "Blazor",
+      "category": "web-framework",
+      "website": "https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor",
+      "html": [
+        "_framework/blazor\\.(?:webassembly|server|web)\\.js",
+        "blazor"
+      ],
+      "implies": [
+        "asp-net"
+      ]
+    },
+    {
+      "id": "express",
+      "name": "Express",
+      "category": "web-framework",
+      "website": "https://expressjs.com",
+      "headers": {
+        "x-powered-by": "^Express"
+      }
+    },
+    {
+      "id": "php",
+      "name": "PHP",
+      "category": "programming-language",
+      "website": "https://www.php.net",
+      "headers": {
+        "x-powered-by": "^PHP/?([\\d.]+)?\\;version:\\1"
+      },
+      "cookies": [
+        "PHPSESSID"
+      ]
+    },
+    {
+      "id": "java",
+      "name": "Java Servlet Container",
+      "category": "programming-language",
+      "website": "https://www.oracle.com/java/",
+      "cookies": [
+        "JSESSIONID"
+      ]
+    },
+    {
+      "id": "spring",
+      "name": "Spring",
+      "category": "web-framework",
+      "website": "https://spring.io",
+      "headers": {
+        "x-application-context": ""
+      },
+      "html": [
+        "/webjars/"
+      ],
+      "confidence": 60
+    },
+    {
+      "id": "flask",
+      "name": "Flask",
+      "category": "web-framework",
+      "website": "https://flask.palletsprojects.com",
+      "headers": {
+        "server": "^Werkzeug/([\\d.]+)\\;version:\\1"
+      }
+    },
+    {
+      "id": "cloudflare",
+      "name": "Cloudflare",
+      "category": "cdn",
+      "website": "https://www.cloudflare.com",
+      "headers": {
+        "server": "^cloudflare$",
+        "cf-ray": "",
+        "cf-cache-status": ""
+      },
+      "cookies": [
+        "__cf_bm",
+        "__cfduid",
+        "cf_clearance"
+      ],
+      "html": [
+        "/cdn-cgi/scripts/",
+        "/cdn-cgi/l/email-protection",
+        "cloudflare-static/rocket-loader"
+      ]
+    },
+    {
+      "id": "cloudflare-turnstile",
+      "name": "Cloudflare Turnstile",
+      "category": "captcha",
+      "website": "https://www.cloudflare.com/products/turnstile/",
+      "html": [
+        "challenges\\.cloudflare\\.com/turnstile",
+        "cf-turnstile"
+      ]
+    },
+    {
+      "id": "cdnjs",
+      "name": "cdnjs",
+      "category": "cdn",
+      "website": "https://cdnjs.com",
+      "html": [
+        "cdnjs\\.cloudflare\\.com"
+      ]
+    },
+    {
+      "id": "jsdelivr",
+      "name": "jsDelivr",
+      "category": "cdn",
+      "website": "https://www.jsdelivr.com",
+      "html": [
+        "cdn\\.jsdelivr\\.net"
+      ]
+    },
+    {
+      "id": "unpkg",
+      "name": "unpkg",
+      "category": "cdn",
+      "website": "https://unpkg.com",
+      "html": [
+        "unpkg\\.com"
+      ]
+    },
+    {
+      "id": "akamai",
+      "name": "Akamai",
+      "category": "cdn",
+      "website": "https://www.akamai.com",
+      "headers": {
+        "server": "AkamaiGHost|AkamaiNetStorage",
+        "x-akamai-transformed": "",
+        "x-akamai-request-id": "",
+        "akamai-grn": ""
+      },
+      "html": [
+        "akamaized\\.net",
+        "akamaihd\\.net",
+        "edgesuite\\.net",
+        "edgekey\\.net"
+      ]
+    },
+    {
+      "id": "fastly",
+      "name": "Fastly",
+      "category": "cdn",
+      "website": "https://www.fastly.com",
+      "headers": {
+        "x-served-by": "^cache-[a-z0-9-]+",
+        "fastly-restarts": "",
+        "x-fastly-request-id": ""
+      },
+      "html": [
+        "fastly\\.net",
+        "global\\.ssl\\.fastly\\.net"
+      ]
+    },
+    {
+      "id": "amazon-cloudfront",
+      "name": "Amazon CloudFront",
+      "category": "cdn",
+      "website": "https://aws.amazon.com/cloudfront/",
+      "headers": {
+        "x-amz-cf-id": "",
+        "x-amz-cf-pop": "",
+        "via": "CloudFront"
+      },
+      "html": [
+        "\\.cloudfront\\.net"
+      ]
+    },
+    {
+      "id": "amazon-web-services",
+      "name": "Amazon Web Services",
+      "category": "hosting",
+      "website": "https://aws.amazon.com",
+      "headers": {
+        "x-amz-request-id": "",
+        "x-amz-id-2": "",
+        "server": "^AmazonS3$|awselb",
+        "x-amz-bucket-region": ""
+      },
+      "html": [
+        "s3\\.amazonaws\\.com",
+        "\\.amazonaws\\.com",
+        "elasticbeanstalk\\.com"
+      ],
+      "cookies": [
+        "AWSALB",
+        "AWSALBCORS",
+        "AWSELB"
+      ]
+    },
+    {
+      "id": "google-cloud",
+      "name": "Google Cloud",
+      "category": "hosting",
+      "website": "https://cloud.google.com",
+      "headers": {
+        "server": "^(?:Google Frontend|GSE|gws|ESF)$",
+        "via": "1\\.1 google",
+        "x-cloud-trace-context": ""
+      },
+      "html": [
+        "storage\\.googleapis\\.com",
+        "appspot\\.com",
+        "\\.run\\.app"
+      ]
+    },
+    {
+      "id": "microsoft-azure",
+      "name": "Microsoft Azure",
+      "category": "hosting",
+      "website": "https://azure.microsoft.com",
+      "headers": {
+        "x-azure-ref": "",
+        "x-msedge-ref": "",
+        "x-azure-requestid": ""
+      },
+      "cookies": [
+        "ARRAffinity",
+        "ARRAffinitySameSite"
+      ],
+      "html": [
+        "azureedge\\.net",
+        "azurewebsites\\.net",
+        "blob\\.core\\.windows\\.net",
+        "azurestaticapps\\.net",
+        "azurefd\\.net"
+      ]
+    },
+    {
+      "id": "vercel",
+      "name": "Vercel",
+      "category": "hosting",
+      "website": "https://vercel.com",
+      "headers": {
+        "server": "^Vercel$",
+        "x-vercel-id": "",
+        "x-vercel-cache": ""
+      },
+      "html": [
+        "\\.vercel\\.app",
+        "vercel\\.com"
+      ]
+    },
+    {
+      "id": "netlify",
+      "name": "Netlify",
+      "category": "hosting",
+      "website": "https://www.netlify.com",
+      "headers": {
+        "server": "^Netlify$",
+        "x-nf-request-id": ""
+      },
+      "html": [
+        "\\.netlify\\.app",
+        "netlify\\.com"
+      ]
+    },
+    {
+      "id": "heroku",
+      "name": "Heroku",
+      "category": "hosting",
+      "website": "https://www.heroku.com",
+      "headers": {
+        "via": "1\\.1 vegur|heroku-router"
+      },
+      "html": [
+        "herokuapp\\.com"
+      ],
+      "confidence": 70
+    },
+    {
+      "id": "fly-io",
+      "name": "Fly.io",
+      "category": "hosting",
+      "website": "https://fly.io",
+      "headers": {
+        "fly-request-id": "",
+        "server": "^Fly/"
+      },
+      "html": [
+        "\\.fly\\.dev"
+      ]
+    },
+    {
+      "id": "render",
+      "name": "Render",
+      "category": "hosting",
+      "website": "https://render.com",
+      "headers": {
+        "x-render-origin-server": "",
+        "rndr-id": ""
+      },
+      "html": [
+        "\\.onrender\\.com"
+      ]
+    },
+    {
+      "id": "railway",
+      "name": "Railway",
+      "category": "hosting",
+      "website": "https://railway.app",
+      "headers": {
+        "x-railway-request-id": "",
+        "x-railway-edge": ""
+      },
+      "html": [
+        "\\.railway\\.app",
+        "\\.up\\.railway\\.app"
+      ]
+    },
+    {
+      "id": "digitalocean",
+      "name": "DigitalOcean App Platform",
+      "category": "hosting",
+      "website": "https://www.digitalocean.com",
+      "headers": {
+        "x-do-app-origin": "",
+        "x-do-orig-status": ""
+      },
+      "html": [
+        "\\.ondigitalocean\\.app",
+        "digitaloceanspaces\\.com"
+      ]
+    },
+    {
+      "id": "github-pages",
+      "name": "GitHub Pages",
+      "category": "hosting",
+      "website": "https://pages.github.com",
+      "headers": {
+        "server": "^GitHub\\.com$",
+        "x-github-request-id": ""
+      },
+      "html": [
+        "\\.github\\.io"
+      ]
+    },
+    {
+      "id": "cloudflare-pages",
+      "name": "Cloudflare Pages",
+      "category": "hosting",
+      "website": "https://pages.cloudflare.com",
+      "html": [
+        "\\.pages\\.dev"
+      ],
+      "headers": {},
+      "confidence": 60
+    },
+    {
+      "id": "firebase",
+      "name": "Firebase",
+      "category": "backend",
+      "website": "https://firebase.google.com",
+      "html": [
+        "firebase(?:app)?\\.js",
+        "firebaseio\\.com",
+        "firebaseapp\\.com",
+        "gstatic\\.com/firebasejs",
+        "firebase\\.initializeApp",
+        "firebasestorage\\.googleapis\\.com"
+      ],
+      "headers": {
+        "server": "^Firebase$"
+      }
+    },
+    {
+      "id": "supabase",
+      "name": "Supabase",
+      "category": "backend",
+      "website": "https://supabase.com",
+      "html": [
+        "\\.supabase\\.co",
+        "supabase-js",
+        "@supabase/supabase-js",
+        "supabase\\.com"
+      ]
+    },
+    {
+      "id": "wp-engine",
+      "name": "WP Engine",
+      "category": "hosting",
+      "website": "https://wpengine.com",
+      "headers": {
+        "x-powered-by": "WP Engine",
+        "wpe-backend": ""
+      },
+      "html": [
+        "wpengine\\.com",
+        "wpenginepowered\\.com"
+      ],
+      "implies": [
+        "wordpress"
+      ]
+    },
+    {
+      "id": "kinsta",
+      "name": "Kinsta",
+      "category": "hosting",
+      "website": "https://kinsta.com",
+      "headers": {
+        "x-kinsta-cache": "",
+        "ki-cf-cache-status": "",
+        "ki-edge": ""
+      },
+      "html": [
+        "kinsta\\.cloud"
+      ]
+    },
+    {
+      "id": "pantheon",
+      "name": "Pantheon",
+      "category": "hosting",
+      "website": "https://pantheon.io",
+      "headers": {
+        "x-pantheon-styx-hostname": "",
+        "x-styx-req-id": ""
+      },
+      "html": [
+        "pantheonsite\\.io"
+      ]
+    },
+    {
+      "id": "flywheel",
+      "name": "Flywheel",
+      "category": "hosting",
+      "website": "https://getflywheel.com",
+      "headers": {
+        "x-fw-hash": "",
+        "x-fw-server": "Flywheel",
+        "x-fw-static": ""
+      },
+      "html": [
+        "flywheelsites\\.com",
+        "flywheelstaging\\.com"
+      ],
+      "implies": [
+        "wordpress"
+      ]
+    },
+    {
+      "id": "wordpress-com",
+      "name": "WordPress.com",
+      "category": "hosting",
+      "website": "https://wordpress.com",
+      "html": [
+        "s\\d\\.wp\\.com",
+        "wordpress\\.com",
+        "i\\d\\.wp\\.com"
+      ],
+      "headers": {
+        "x-hacker": "",
+        "host-header": "WordPress\\.com"
+      },
+      "implies": [
+        "wordpress"
+      ]
+    },
+    {
+      "id": "nginx",
+      "name": "Nginx",
+      "category": "web-server",
+      "website": "https://nginx.org",
+      "headers": {
+        "server": "^nginx/?([\\d.]+)?\\;version:\\1"
+      }
+    },
+    {
+      "id": "apache",
+      "name": "Apache HTTP Server",
+      "category": "web-server",
+      "website": "https://httpd.apache.org",
+      "headers": {
+        "server": "^Apache(?:/([\\d.]+))?\\;version:\\1"
+      }
+    },
+    {
+      "id": "microsoft-iis",
+      "name": "Microsoft IIS",
+      "category": "web-server",
+      "website": "https://www.iis.net",
+      "headers": {
+        "server": "^Microsoft-IIS/([\\d.]+)\\;version:\\1"
+      }
+    },
+    {
+      "id": "litespeed",
+      "name": "LiteSpeed",
+      "category": "web-server",
+      "website": "https://www.litespeedtech.com",
+      "headers": {
+        "server": "^LiteSpeed",
+        "x-litespeed-cache": "",
+        "x-litespeed-tag": ""
+      }
+    },
+    {
+      "id": "openresty",
+      "name": "OpenResty",
+      "category": "web-server",
+      "website": "https://openresty.org",
+      "headers": {
+        "server": "^openresty/?([\\d.]+)?\\;version:\\1"
+      }
+    },
+    {
+      "id": "caddy",
+      "name": "Caddy",
+      "category": "web-server",
+      "website": "https://caddyserver.com",
+      "headers": {
+        "server": "^Caddy$"
+      }
+    },
+    {
+      "id": "envoy",
+      "name": "Envoy",
+      "category": "web-server",
+      "website": "https://www.envoyproxy.io",
+      "headers": {
+        "server": "^envoy$",
+        "x-envoy-upstream-service-time": ""
+      }
+    },
+    {
+      "id": "varnish",
+      "name": "Varnish",
+      "category": "cdn",
+      "website": "https://varnish-cache.org",
+      "headers": {
+        "x-varnish": "",
+        "via": "varnish"
+      }
+    },
+    {
+      "id": "imperva",
+      "name": "Imperva (Incapsula)",
+      "category": "waf",
+      "website": "https://www.imperva.com",
+      "headers": {
+        "x-cdn": "^Imperva$|^Incapsula$",
+        "x-iinfo": ""
+      },
+      "cookies": [
+        "incap_ses_",
+        "visid_incap_",
+        "nlbi_"
+      ],
+      "html": [
+        "_Incapsula_Resource"
+      ]
+    },
+    {
+      "id": "sucuri",
+      "name": "Sucuri",
+      "category": "waf",
+      "website": "https://sucuri.net",
+      "headers": {
+        "server": "^Sucuri/Cloudproxy",
+        "x-sucuri-id": "",
+        "x-sucuri-cache": ""
+      }
+    },
+    {
+      "id": "aws-waf",
+      "name": "AWS WAF",
+      "category": "waf",
+      "website": "https://aws.amazon.com/waf/",
+      "cookies": [
+        "aws-waf-token"
+      ],
+      "html": [
+        "awswaf",
+        "token\\.awswaf\\.com"
+      ],
+      "headers": {
+        "x-amzn-waf-action": ""
+      }
+    },
+    {
+      "id": "datadome",
+      "name": "DataDome",
+      "category": "waf",
+      "website": "https://datadome.co",
+      "html": [
+        "js\\.datadome\\.co",
+        "datadome"
+      ],
+      "cookies": [
+        "datadome"
+      ],
+      "headers": {
+        "x-datadome": "",
+        "x-datadome-cid": ""
+      }
+    },
+    {
+      "id": "human-perimeterx",
+      "name": "HUMAN (PerimeterX)",
+      "category": "waf",
+      "website": "https://www.humansecurity.com",
+      "html": [
+        "client\\.px-cloud\\.net",
+        "_pxAppId",
+        "perimeterx",
+        "px-cdn\\.net"
+      ],
+      "cookies": [
+        "_px3",
+        "_pxhd",
+        "_pxvid"
+      ]
+    },
+    {
+      "id": "kasada",
+      "name": "Kasada",
+      "category": "waf",
+      "website": "https://www.kasada.io",
+      "html": [
+        "kpsdk",
+        "kasada"
+      ],
+      "headers": {
+        "x-kpsdk-ct": ""
+      }
+    },
+    {
+      "id": "recaptcha",
+      "name": "Google reCAPTCHA",
+      "category": "captcha",
+      "website": "https://www.google.com/recaptcha/",
+      "html": [
+        "google\\.com/recaptcha/(?:api|enterprise)\\.js",
+        "grecaptcha",
+        "recaptcha\\.net/recaptcha",
+        "g-recaptcha"
+      ]
+    },
+    {
+      "id": "hcaptcha",
+      "name": "hCaptcha",
+      "category": "captcha",
+      "website": "https://www.hcaptcha.com",
+      "html": [
+        "hcaptcha\\.com/1/api\\.js",
+        "h-captcha",
+        "js\\.hcaptcha\\.com"
+      ]
+    },
+    {
+      "id": "wp-rocket",
+      "name": "WP Rocket",
+      "category": "wordpress-plugin",
+      "website": "https://wp-rocket.me",
+      "html": [
+        "/wp-content/plugins/wp-rocket/",
+        "data-rocket-",
+        "<!-- This website is like a Rocket",
+        "rocket-loader"
+      ],
+      "implies": [
+        "wordpress"
+      ]
+    },
+    {
+      "id": "yoast-seo",
+      "name": "Yoast SEO",
+      "category": "wordpress-plugin",
+      "website": "https://yoast.com",
+      "html": [
+        "<!-- This site is optimized with the Yoast SEO plugin v([\\d.]+)\\;version:\\1",
+        "yoast-schema-graph",
+        "/plugins/wordpress-seo/"
+      ],
+      "implies": [
+        "wordpress"
+      ]
+    },
+    {
+      "id": "rank-math",
+      "name": "Rank Math SEO",
+      "category": "wordpress-plugin",
+      "website": "https://rankmath.com",
+      "html": [
+        "<!-- Search Engine Optimization by Rank Math",
+        "/plugins/seo-by-rank-math/"
+      ],
+      "implies": [
+        "wordpress"
+      ]
+    },
+    {
+      "id": "elementor",
+      "name": "Elementor",
+      "category": "wordpress-theme",
+      "website": "https://elementor.com",
+      "html": [
+        "/plugins/elementor/",
+        "elementor-",
+        "data-elementor-type"
+      ],
+      "meta": {
+        "generator": "^Elementor ?([\\d.]+)?\\;version:\\1"
+      },
+      "implies": [
+        "wordpress"
+      ]
+    },
+    {
+      "id": "divi",
+      "name": "Divi",
+      "category": "wordpress-theme",
+      "website": "https://www.elegantthemes.com/gallery/divi/",
+      "html": [
+        "/themes/Divi/",
+        "et_pb_",
+        "et-core-"
+      ],
+      "implies": [
+        "wordpress"
+      ]
+    },
+    {
+      "id": "wpbakery",
+      "name": "WPBakery Page Builder",
+      "category": "wordpress-theme",
+      "website": "https://wpbakery.com",
+      "html": [
+        "/plugins/js_composer/",
+        "wpb_wrapper",
+        "vc_row"
+      ],
+      "implies": [
+        "wordpress"
+      ]
+    },
+    {
+      "id": "avada",
+      "name": "Avada",
+      "category": "wordpress-theme",
+      "website": "https://avada.com",
+      "html": [
+        "/themes/Avada/",
+        "fusion-builder",
+        "avada-"
+      ],
+      "implies": [
+        "wordpress"
+      ]
+    },
+    {
+      "id": "astra",
+      "name": "Astra",
+      "category": "wordpress-theme",
+      "website": "https://wpastra.com",
+      "html": [
+        "/themes/astra/",
+        "ast-container"
+      ],
+      "implies": [
+        "wordpress"
+      ]
+    },
+    {
+      "id": "jetpack",
+      "name": "Jetpack",
+      "category": "wordpress-plugin",
+      "website": "https://jetpack.com",
+      "html": [
+        "stats\\.wp\\.com",
+        "/plugins/jetpack/",
+        "jetpack-"
+      ],
+      "implies": [
+        "wordpress"
+      ]
+    },
+    {
+      "id": "wordfence",
+      "name": "Wordfence",
+      "category": "wordpress-plugin",
+      "website": "https://www.wordfence.com",
+      "html": [
+        "/plugins/wordfence/",
+        "wordfence"
+      ],
+      "cookies": [
+        "wfwaf-authcookie"
+      ],
+      "implies": [
+        "wordpress"
+      ]
+    },
+    {
+      "id": "bunny-cdn",
+      "name": "Bunny CDN",
+      "category": "cdn",
+      "website": "https://bunny.net",
+      "headers": {
+        "server": "^BunnyCDN",
+        "cdn-pullzone": "",
+        "cdn-cache": ""
+      },
+      "html": [
+        "\\.b-cdn\\.net"
+      ]
+    },
+    {
+      "id": "keycdn",
+      "name": "KeyCDN",
+      "category": "cdn",
+      "website": "https://www.keycdn.com",
+      "headers": {
+        "server": "^keycdn-engine",
+        "x-edge-location": ""
+      },
+      "html": [
+        "\\.kxcdn\\.com"
+      ]
+    },
+    {
+      "id": "stackpath",
+      "name": "StackPath",
+      "category": "cdn",
+      "website": "https://www.stackpath.com",
+      "headers": {
+        "server": "^StackPath",
+        "x-hw": ""
+      },
+      "html": [
+        "stackpathcdn\\.com",
+        "netdna-cdn\\.com",
+        "netdna-ssl\\.com"
+      ]
+    },
+    {
+      "id": "imgix",
+      "name": "imgix",
+      "category": "media",
+      "website": "https://imgix.com",
+      "html": [
+        "\\.imgix\\.net"
+      ]
+    },
+    {
+      "id": "cloudinary",
+      "name": "Cloudinary",
+      "category": "media",
+      "website": "https://cloudinary.com",
+      "html": [
+        "res\\.cloudinary\\.com",
+        "cloudinary-core"
+      ]
+    },
+    {
+      "id": "uploadcare",
+      "name": "Uploadcare",
+      "category": "media",
+      "website": "https://uploadcare.com",
+      "html": [
+        "ucarecdn\\.com",
+        "uploadcare"
+      ]
+    },
+    {
+      "id": "cloudflare-images",
+      "name": "Cloudflare Images",
+      "category": "media",
+      "website": "https://www.cloudflare.com/products/cloudflare-images/",
+      "html": [
+        "imagedelivery\\.net",
+        "/cdn-cgi/image/"
+      ]
+    },
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "category": "video",
+      "website": "https://www.youtube.com",
+      "html": [
+        "youtube\\.com/embed/",
+        "youtube-nocookie\\.com/embed/",
+        "youtube\\.com/iframe_api"
+      ]
+    },
+    {
+      "id": "vimeo",
+      "name": "Vimeo",
+      "category": "video",
+      "website": "https://vimeo.com",
+      "html": [
+        "player\\.vimeo\\.com",
+        "vimeo\\.com/video/",
+        "vimeocdn\\.com"
+      ]
+    },
+    {
+      "id": "wistia",
+      "name": "Wistia",
+      "category": "video",
+      "website": "https://wistia.com",
+      "html": [
+        "fast\\.wistia\\.(?:com|net)",
+        "wistia_embed",
+        "wistia\\.com/medias"
+      ]
+    },
+    {
+      "id": "vidyard",
+      "name": "Vidyard",
+      "category": "video",
+      "website": "https://www.vidyard.com",
+      "html": [
+        "play\\.vidyard\\.com",
+        "vidyard\\.com"
+      ]
+    },
+    {
+      "id": "loom",
+      "name": "Loom",
+      "category": "video",
+      "website": "https://www.loom.com",
+      "html": [
+        "loom\\.com/embed/",
+        "loom\\.com/share/"
+      ]
+    },
+    {
+      "id": "brightcove",
+      "name": "Brightcove",
+      "category": "video",
+      "website": "https://www.brightcove.com",
+      "html": [
+        "players\\.brightcove\\.net",
+        "brightcove"
+      ]
+    },
+    {
+      "id": "jw-player",
+      "name": "JW Player",
+      "category": "video",
+      "website": "https://www.jwplayer.com",
+      "html": [
+        "jwplayer\\.com",
+        "jwpcdn\\.com",
+        "jwplayer\\("
+      ]
+    },
+    {
+      "id": "mux",
+      "name": "Mux",
+      "category": "video",
+      "website": "https://www.mux.com",
+      "html": [
+        "stream\\.mux\\.com",
+        "mux-player",
+        "image\\.mux\\.com"
+      ]
+    },
+    {
+      "id": "algolia",
+      "name": "Algolia",
+      "category": "search",
+      "website": "https://www.algolia.com",
+      "html": [
+        "algolia(?:search|net)?\\.(?:com|net)",
+        "instantsearch",
+        "algoliasearch",
+        "-dsn\\.algolia\\.net"
+      ]
+    },
+    {
+      "id": "typesense",
+      "name": "Typesense",
+      "category": "search",
+      "website": "https://typesense.org",
+      "html": [
+        "typesense\\.net",
+        "typesense-instantsearch",
+        "typesense"
+      ]
+    },
+    {
+      "id": "searchspring",
+      "name": "Searchspring",
+      "category": "search",
+      "website": "https://searchspring.com",
+      "html": [
+        "searchspring\\.(?:net|io)",
+        "searchspring"
+      ]
+    },
+    {
+      "id": "klevu",
+      "name": "Klevu",
+      "category": "search",
+      "website": "https://www.klevu.com",
+      "html": [
+        "js\\.klevu\\.com",
+        "klevu"
+      ]
+    },
+    {
+      "id": "coveo",
+      "name": "Coveo",
+      "category": "search",
+      "website": "https://www.coveo.com",
+      "html": [
+        "static\\.cloud\\.coveo\\.com",
+        "coveo\\.com"
+      ]
+    },
+    {
+      "id": "constructor",
+      "name": "Constructor",
+      "category": "search",
+      "website": "https://constructor.com",
+      "html": [
+        "cnstrc\\.com",
+        "constructor\\.io"
+      ]
+    },
+    {
+      "id": "nosto",
+      "name": "Nosto",
+      "category": "ab-testing",
+      "website": "https://www.nosto.com",
+      "html": [
+        "connect\\.nosto\\.com",
+        "nosto\\.com"
+      ]
+    },
+    {
+      "id": "trustpilot",
+      "name": "Trustpilot",
+      "category": "reviews",
+      "website": "https://www.trustpilot.com",
+      "html": [
+        "widget\\.trustpilot\\.com",
+        "trustpilot\\.com",
+        "data-businessunit-id"
+      ]
+    },
+    {
+      "id": "bazaarvoice",
+      "name": "Bazaarvoice",
+      "category": "reviews",
+      "website": "https://www.bazaarvoice.com",
+      "html": [
+        "apps\\.bazaarvoice\\.com",
+        "bazaarvoice\\.com",
+        "display\\.ugc\\.bazaarvoice"
+      ]
+    },
+    {
+      "id": "powerreviews",
+      "name": "PowerReviews",
+      "category": "reviews",
+      "website": "https://www.powerreviews.com",
+      "html": [
+        "ui\\.powerreviews\\.com",
+        "powerreviews"
+      ]
+    },
+    {
+      "id": "google-maps",
+      "name": "Google Maps",
+      "category": "maps",
+      "website": "https://developers.google.com/maps",
+      "html": [
+        "maps\\.googleapis\\.com/maps/api",
+        "google\\.com/maps/embed",
+        "maps\\.google\\.com/maps"
+      ]
+    },
+    {
+      "id": "mapbox",
+      "name": "Mapbox",
+      "category": "maps",
+      "website": "https://www.mapbox.com",
+      "html": [
+        "api\\.mapbox\\.com/mapbox-gl-js",
+        "mapbox-gl",
+        "mapbox\\.com"
+      ]
+    },
+    {
+      "id": "leaflet",
+      "name": "Leaflet",
+      "category": "maps",
+      "website": "https://leafletjs.com",
+      "html": [
+        "leaflet(?:\\.min)?\\.js",
+        "leaflet@([\\d.]+)\\;version:\\1",
+        "leaflet\\.css"
+      ]
+    },
+    {
+      "id": "auth0",
+      "name": "Auth0",
+      "category": "auth",
+      "website": "https://auth0.com",
+      "html": [
+        "cdn\\.auth0\\.com",
+        "auth0-spa-js",
+        "\\.auth0\\.com",
+        "auth0\\.js"
+      ]
+    },
+    {
+      "id": "okta",
+      "name": "Okta",
+      "category": "auth",
+      "website": "https://www.okta.com",
+      "html": [
+        "ok12static\\.oktacdn\\.com",
+        "okta-signin-widget",
+        "\\.okta\\.com",
+        "\\.oktapreview\\.com"
+      ]
+    },
+    {
+      "id": "clerk",
+      "name": "Clerk",
+      "category": "auth",
+      "website": "https://clerk.com",
+      "html": [
+        "clerk\\.accounts\\.dev",
+        "@clerk/",
+        "clerk\\.com",
+        "__clerk_"
+      ],
+      "cookies": [
+        "__clerk_db_jwt"
+      ]
+    },
+    {
+      "id": "sign-in-with-google",
+      "name": "Sign in with Google",
+      "category": "auth",
+      "website": "https://developers.google.com/identity",
+      "html": [
+        "accounts\\.google\\.com/gsi/client",
+        "g_id_onload"
+      ]
+    },
+    {
+      "id": "facebook-sdk",
+      "name": "Facebook SDK",
+      "category": "social",
+      "website": "https://developers.facebook.com",
+      "html": [
+        "connect\\.facebook\\.net/[a-z_A-Z]+/sdk\\.js",
+        "FB\\.init\\(",
+        "fb-root"
+      ]
+    },
+    {
+      "id": "x-widgets",
+      "name": "X (Twitter) Widgets",
+      "category": "social",
+      "website": "https://developer.x.com",
+      "html": [
+        "platform\\.twitter\\.com/widgets\\.js",
+        "twitter-tweet"
+      ]
+    },
+    {
+      "id": "instagram-embed",
+      "name": "Instagram Embed",
+      "category": "social",
+      "website": "https://www.instagram.com",
+      "html": [
+        "instagram\\.com/embed\\.js",
+        "instagram-media"
+      ]
+    },
+    {
+      "id": "addthis",
+      "name": "AddThis",
+      "category": "social",
+      "website": "https://www.addthis.com",
+      "html": [
+        "s7\\.addthis\\.com",
+        "addthis_widget"
+      ]
+    },
+    {
+      "id": "sharethis",
+      "name": "ShareThis",
+      "category": "social",
+      "website": "https://sharethis.com",
+      "html": [
+        "platform-api\\.sharethis\\.com",
+        "sharethis"
+      ]
+    },
+    {
+      "id": "elfsight",
+      "name": "Elfsight",
+      "category": "social",
+      "website": "https://elfsight.com",
+      "html": [
+        "static\\.elfsight\\.com",
+        "elfsight-app"
+      ]
+    },
+    {
+      "id": "disqus",
+      "name": "Disqus",
+      "category": "comments",
+      "website": "https://disqus.com",
+      "html": [
+        "disqus\\.com/embed\\.js",
+        "disqus_thread",
+        "disqus_shortname"
+      ]
+    },
+    {
+      "id": "onesignal",
+      "name": "OneSignal",
+      "category": "push-notifications",
+      "website": "https://onesignal.com",
+      "html": [
+        "cdn\\.onesignal\\.com",
+        "OneSignal(?:Deferred)?\\.push"
+      ]
+    },
+    {
+      "id": "pushengage",
+      "name": "PushEngage",
+      "category": "push-notifications",
+      "website": "https://www.pushengage.com",
+      "html": [
+        "pushengage\\.com",
+        "clientcdn\\.pushengage\\.com"
+      ]
+    },
+    {
+      "id": "sprig",
+      "name": "Sprig",
+      "category": "surveys",
+      "website": "https://sprig.com",
+      "html": [
+        "cdn\\.sprig\\.com",
+        "userleap",
+        "Sprig\\("
+      ]
+    },
+    {
+      "id": "qualtrics",
+      "name": "Qualtrics",
+      "category": "surveys",
+      "website": "https://www.qualtrics.com",
+      "html": [
+        "siteintercept\\.qualtrics\\.com",
+        "qualtrics\\.com",
+        "QSI\\.API"
+      ]
+    },
+    {
+      "id": "surveymonkey",
+      "name": "SurveyMonkey",
+      "category": "surveys",
+      "website": "https://www.surveymonkey.com",
+      "html": [
+        "widget\\.surveymonkey\\.com",
+        "surveymonkey\\.com/r/",
+        "smcx\\.com"
+      ]
+    },
+    {
+      "id": "delighted",
+      "name": "Delighted",
+      "category": "surveys",
+      "website": "https://delighted.com",
+      "html": [
+        "d2yyd1h5u9mauk\\.cloudfront\\.net",
+        "delighted\\.com",
+        "delighted\\.survey"
+      ]
+    },
+    {
+      "id": "medallia",
+      "name": "Medallia",
+      "category": "surveys",
+      "website": "https://www.medallia.com",
+      "html": [
+        "nebula-cdn\\.kampyle\\.com",
+        "medallia\\.com",
+        "kampyle"
+      ]
+    },
+    {
+      "id": "gravatar",
+      "name": "Gravatar",
+      "category": "social",
+      "website": "https://gravatar.com",
+      "html": [
+        "gravatar\\.com/avatar/"
+      ]
+    },
+    {
+      "id": "statuspage",
+      "name": "Atlassian Statuspage",
+      "category": "status",
+      "website": "https://www.atlassian.com/software/statuspage",
+      "html": [
+        "statuspage\\.io",
+        "\\.statuspage\\.io/embed"
+      ]
+    },
+    {
+      "id": "kajabi",
+      "name": "Kajabi",
+      "category": "lms",
+      "website": "https://kajabi.com",
+      "html": [
+        "kajabi-content",
+        "kajabi\\.com",
+        "mykajabi\\.com",
+        "kajabi-storefronts"
+      ]
+    },
+    {
+      "id": "teachable",
+      "name": "Teachable",
+      "category": "lms",
+      "website": "https://teachable.com",
+      "html": [
+        "teachablecdn\\.com",
+        "teachable\\.com"
+      ]
+    },
+    {
+      "id": "thinkific",
+      "name": "Thinkific",
+      "category": "lms",
+      "website": "https://www.thinkific.com",
+      "html": [
+        "thinkific\\.com",
+        "thinkificcdn"
+      ]
+    },
+    {
+      "id": "podia",
+      "name": "Podia",
+      "category": "lms",
+      "website": "https://www.podia.com",
+      "html": [
+        "podia\\.com",
+        "cdn\\.podia\\.com"
+      ]
+    },
+    {
+      "id": "accessibe",
+      "name": "accessiBe",
+      "category": "accessibility",
+      "website": "https://accessibe.com",
+      "html": [
+        "acsbapp\\.com",
+        "accessibe",
+        "acsbJS"
+      ]
+    },
+    {
+      "id": "userway",
+      "name": "UserWay",
+      "category": "accessibility",
+      "website": "https://userway.org",
+      "html": [
+        "cdn\\.userway\\.org",
+        "userway"
+      ]
+    },
+    {
+      "id": "audioeye",
+      "name": "AudioEye",
+      "category": "accessibility",
+      "website": "https://www.audioeye.com",
+      "html": [
+        "wsmcdn\\.audioeye\\.com",
+        "audioeye"
+      ]
+    },
+    {
+      "id": "vanta",
+      "name": "Vanta Trust Center",
+      "category": "security",
+      "website": "https://www.vanta.com",
+      "html": [
+        "trust\\.vanta",
+        "static\\.vanta\\.com",
+        "vanta\\.com/embed"
+      ]
+    },
+    {
+      "id": "drata",
+      "name": "Drata Trust Center",
+      "category": "security",
+      "website": "https://drata.com",
+      "html": [
+        "trust\\.drata",
+        "drata\\.com/embed"
+      ]
+    },
+    {
+      "id": "sift",
+      "name": "Sift",
+      "category": "security",
+      "website": "https://sift.com",
+      "html": [
+        "cdn\\.sift\\.com",
+        "_sift\\.push",
+        "siftscience"
+      ]
+    },
+    {
+      "id": "riskified",
+      "name": "Riskified",
+      "category": "security",
+      "website": "https://www.riskified.com",
+      "html": [
+        "beacon\\.riskified\\.com",
+        "riskified"
+      ]
+    },
+    {
+      "id": "signifyd",
+      "name": "Signifyd",
+      "category": "security",
+      "website": "https://www.signifyd.com",
+      "html": [
+        "cdn-scripts\\.signifyd\\.com",
+        "signifyd"
+      ]
+    },
+    {
+      "id": "twilio-segment-cdp",
+      "name": "Twilio Segment CDP",
+      "category": "marketing-automation",
+      "website": "https://segment.com",
+      "html": [
+        "cdn\\.segment\\.com/next-integrations",
+        "segment\\.com/v1/projects"
+      ],
+      "implies": [
+        "segment"
+      ],
+      "confidence": 70
+    },
+    {
+      "id": "cookie-script",
+      "name": "Cookie-Script",
+      "category": "consent-management",
+      "website": "https://cookie-script.com",
+      "html": [
+        "cdn\\.cookie-script\\.com",
+        "cookie-script\\.com"
+      ]
+    },
+    {
+      "id": "ketch",
+      "name": "Ketch",
+      "category": "consent-management",
+      "website": "https://www.ketch.com",
+      "html": [
+        "global\\.ketchcdn\\.com",
+        "ketch\\.com",
+        "semaphore\\.ketch"
+      ]
+    },
+    {
+      "id": "transcend",
+      "name": "Transcend",
+      "category": "consent-management",
+      "website": "https://transcend.io",
+      "html": [
+        "transcend-cdn\\.com",
+        "transcend\\.io",
+        "airgap\\.js"
+      ]
+    },
+    {
+      "id": "hubspot-chat",
+      "name": "HubSpot Conversations",
+      "category": "live-chat",
+      "website": "https://www.hubspot.com/products/conversations",
+      "html": [
+        "js\\.usemessages\\.com",
+        "hubspot-messages-iframe-container"
+      ],
+      "implies": [
+        "hubspot"
+      ]
+    },
+    {
+      "id": "salesforce-service-cloud-chat",
+      "name": "Salesforce Service Cloud Chat",
+      "category": "live-chat",
+      "website": "https://www.salesforce.com/products/service-cloud/",
+      "html": [
+        "service\\.force\\.com/embeddedservice",
+        "embeddedservice/[\\d.]+/esw\\.min\\.js",
+        "embeddedservice_bootstrap"
+      ],
+      "implies": [
+        "salesforce"
+      ]
+    },
+    {
+      "id": "marketo-forms",
+      "name": "Marketo Forms",
+      "category": "forms",
+      "website": "https://business.adobe.com/products/marketo/adobe-marketo.html",
+      "html": [
+        "/js/forms2/js/forms2\\.min\\.js",
+        "MktoForms2"
+      ],
+      "implies": [
+        "marketo"
+      ]
+    },
+    {
+      "id": "hubspot-forms",
+      "name": "HubSpot Forms",
+      "category": "forms",
+      "website": "https://www.hubspot.com/products/marketing/forms",
+      "html": [
+        "js\\.hsforms\\.net/forms/",
+        "hbspt\\.forms\\.create"
+      ],
+      "implies": [
+        "hubspot"
+      ]
+    },
+    {
+      "id": "pardot-forms",
+      "name": "Pardot Form Handlers",
+      "category": "forms",
+      "website": "https://www.salesforce.com/products/marketing-cloud/marketing-automation/",
+      "html": [
+        "go\\.pardot\\.com/l/",
+        "pardot\\.com/l/\\d+/"
+      ],
+      "implies": [
+        "pardot"
+      ]
+    },
+    {
+      "id": "hubspot-meetings",
+      "name": "HubSpot Meetings",
+      "category": "scheduling",
+      "website": "https://www.hubspot.com/products/sales/schedule-meeting",
+      "html": [
+        "meetings\\.hubspot\\.com",
+        "meetings-eu\\d*\\.hubspot\\.com",
+        "MeetingsEmbedCode"
+      ],
+      "implies": [
+        "hubspot"
+      ]
+    },
+    {
+      "id": "intercom-articles",
+      "name": "Intercom Help Center",
+      "category": "customer-support",
+      "website": "https://www.intercom.com/help-center",
+      "html": [
+        "intercom\\.help",
+        "intercom-help"
+      ],
+      "implies": [
+        "intercom"
+      ],
+      "confidence": 70
+    },
+    {
+      "id": "zendesk-guide",
+      "name": "Zendesk Guide",
+      "category": "customer-support",
+      "website": "https://www.zendesk.com/service/help-center/",
+      "html": [
+        "\\.zendesk\\.com/hc/",
+        "zendesk\\.com/hc"
+      ],
+      "implies": [
+        "zendesk"
+      ],
+      "confidence": 70
+    },
+    {
+      "id": "shopify-plus-checkout",
+      "name": "Shopify Checkout Extensibility",
+      "category": "ecommerce",
+      "website": "https://www.shopify.com/plus",
+      "html": [
+        "checkout\\.shopify\\.com",
+        "/checkouts/cn/",
+        "shopify-checkout"
+      ],
+      "implies": [
+        "shopify"
+      ],
+      "confidence": 70
+    },
+    {
+      "id": "wix-stores",
+      "name": "Wix Stores",
+      "category": "ecommerce",
+      "website": "https://www.wix.com/ecommerce/website",
+      "html": [
+        "wixstores",
+        "wix-stores",
+        "ecom\\.wix"
+      ],
+      "implies": [
+        "wix"
+      ]
+    },
+    {
+      "id": "squarespace-commerce",
+      "name": "Squarespace Commerce",
+      "category": "ecommerce",
+      "website": "https://www.squarespace.com/ecommerce-website",
+      "html": [
+        "sqs-add-to-cart",
+        "squarespace-commerce",
+        "sqs-cart"
+      ],
+      "implies": [
+        "squarespace"
+      ]
+    },
+    {
+      "id": "webflow-ecommerce",
+      "name": "Webflow Ecommerce",
+      "category": "ecommerce",
+      "website": "https://webflow.com/ecommerce",
+      "html": [
+        "w-commerce-commerceaddtocartform",
+        "data-wf-ecommerce",
+        "w-commerce-"
+      ],
+      "implies": [
+        "webflow"
+      ]
+    },
+    {
+      "id": "salesforce-b2c-einstein",
+      "name": "Salesforce Einstein Recommendations",
+      "category": "ab-testing",
+      "website": "https://www.salesforce.com/products/commerce-cloud/",
+      "html": [
+        "cquotient\\.com",
+        "cqcookieid"
+      ],
+      "implies": [
+        "salesforce-commerce-cloud"
+      ]
+    },
+    {
+      "id": "amazon-connect",
+      "name": "Amazon Connect Chat",
+      "category": "live-chat",
+      "website": "https://aws.amazon.com/connect/",
+      "html": [
+        "amazon-connect-chat-interface",
+        "connect\\.aws",
+        "amazon-connect-chat"
+      ]
+    },
+    {
+      "id": "sprinklr",
+      "name": "Sprinklr",
+      "category": "customer-support",
+      "website": "https://www.sprinklr.com",
+      "html": [
+        "sprinklr\\.com",
+        "prod\\d*-live-chat\\.sprinklr"
+      ]
+    },
+    {
+      "id": "moengage",
+      "name": "MoEngage",
+      "category": "marketing-automation",
+      "website": "https://www.moengage.com",
+      "html": [
+        "cdn\\.moengage\\.com",
+        "moengage",
+        "Moengage\\("
+      ]
+    },
+    {
+      "id": "clevertap",
+      "name": "CleverTap",
+      "category": "marketing-automation",
+      "website": "https://clevertap.com",
+      "html": [
+        "clevertap\\.com",
+        "static\\.clevertap\\.com",
+        "clevertap\\.account"
+      ]
+    },
+    {
+      "id": "webengage",
+      "name": "WebEngage",
+      "category": "marketing-automation",
+      "website": "https://webengage.com",
+      "html": [
+        "webengage\\.com",
+        "ssl\\.widgets\\.webengage\\.com",
+        "webengage\\.init"
+      ]
+    },
+    {
+      "id": "freshmarketer",
+      "name": "Freshmarketer",
+      "category": "marketing-automation",
+      "website": "https://www.freshworks.com/marketing-automation/",
+      "html": [
+        "freshmarketer\\.com",
+        "fwcrm\\.com/mkt"
+      ]
+    },
+    {
+      "id": "sharpspring",
+      "name": "SharpSpring (Constant Contact Lead Gen)",
+      "category": "marketing-automation",
+      "website": "https://sharpspring.com",
+      "html": [
+        "koi-3[a-z0-9]+\\.marketingautomation\\.services",
+        "sharpspring\\.com",
+        "_ss\\.push"
+      ]
+    },
+    {
+      "id": "eloqua",
+      "name": "Oracle Eloqua",
+      "category": "marketing-automation",
+      "website": "https://www.oracle.com/cx/marketing/automation/",
+      "html": [
+        "elqCfg",
+        "img\\.en25\\.com",
+        "eloqua\\.com",
+        "elqSiteId"
+      ]
+    },
+    {
+      "id": "oracle-responsys",
+      "name": "Oracle Responsys",
+      "category": "email-marketing",
+      "website": "https://www.oracle.com/cx/marketing/",
+      "html": [
+        "responsys\\.net",
+        "responsys\\.com"
+      ]
+    },
+    {
+      "id": "sap-emarsys",
+      "name": "SAP Emarsys",
+      "category": "marketing-automation",
+      "website": "https://emarsys.com",
+      "html": [
+        "emarsys\\.net",
+        "scarabresearch\\.com",
+        "emarsys\\.com"
+      ]
+    },
+    {
+      "id": "listrak",
+      "name": "Listrak",
+      "category": "email-marketing",
+      "website": "https://www.listrak.com",
+      "html": [
+        "cdn\\.listrakbi\\.com",
+        "listrak"
+      ]
+    },
+    {
+      "id": "bloomreach",
+      "name": "Bloomreach Engagement (Exponea)",
+      "category": "marketing-automation",
+      "website": "https://www.bloomreach.com",
+      "html": [
+        "exponea\\.com",
+        "bloomreach\\.com",
+        "api\\.exponea"
+      ]
+    },
+    {
+      "id": "dotdigital",
+      "name": "Dotdigital",
+      "category": "email-marketing",
+      "website": "https://dotdigital.com",
+      "html": [
+        "dotdigital\\.com",
+        "dotmailer",
+        "trackedlink\\.net"
+      ]
+    },
+    {
+      "id": "sailthru",
+      "name": "Sailthru",
+      "category": "email-marketing",
+      "website": "https://www.sailthru.com",
+      "html": [
+        "sailthru\\.com",
+        "ak\\.sail-horizon\\.com",
+        "Sailthru\\.init"
+      ]
+    },
+    {
+      "id": "cordial",
+      "name": "Cordial",
+      "category": "marketing-automation",
+      "website": "https://cordial.com",
+      "html": [
+        "cordial\\.(?:com|io)",
+        "crdl\\("
+      ]
+    },
+    {
+      "id": "yieldify",
+      "name": "Yieldify",
+      "category": "popups",
+      "website": "https://www.yieldify.com",
+      "html": [
+        "yieldify\\.com",
+        "td\\.yieldify\\.com"
+      ]
+    },
+    {
+      "id": "monetate",
+      "name": "Kibo Personalization (Monetate)",
+      "category": "ab-testing",
+      "website": "https://kibocommerce.com",
+      "html": [
+        "monetate\\.net",
+        "monetateq"
+      ]
+    },
+    {
+      "id": "sitespect",
+      "name": "SiteSpect",
+      "category": "ab-testing",
+      "website": "https://www.sitespect.com",
+      "html": [
+        "sitespect"
+      ],
+      "confidence": 60
+    },
+    {
+      "id": "hubspot-video",
+      "name": "HubSpot Video",
+      "category": "video",
+      "website": "https://www.hubspot.com",
+      "html": [
+        "play\\.hubspotvideo\\.com"
+      ],
+      "implies": [
+        "hubspot"
+      ]
+    }
+  ]
+}

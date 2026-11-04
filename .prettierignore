@@ -1,0 +1,6 @@
+# Generated or data files, and hand-formatted docs (Prettier would re-align their tables and code blocks).
+package-lock.json
+README.md
+smithery.yaml
+src/signatures/signatures.json
+src/data/

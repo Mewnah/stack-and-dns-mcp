@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "stack-and-dns": {
+      "command": "node",
+      "args": ["D:\\Projects\\MCP\\stack-and-dns-mcp\\dist\\index.js"],
+      "env": {
+        "STACKDNS_LOG_LEVEL": "warn",
+        "STACKDNS_USAGE_FILE": "D:\\Projects\\MCP\\stack-and-dns-mcp\\data\\usage.json",
+        "STACKDNS_DB_FILE": "D:\\Projects\\MCP\\stack-and-dns-mcp\\data\\stackdns.db"
+      }
+    }
+  }
+}

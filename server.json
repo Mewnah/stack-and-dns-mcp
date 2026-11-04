@@ -1,0 +1,64 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Mewnah/stack-and-dns-mcp",
+  "description": "Inspect any domain: tech stack, SPF/DKIM/DMARC/MX email health and security posture, for AI agents",
+  "repository": {
+    "url": "https://github.com/Mewnah/stack-and-dns-mcp",
+    "source": "github"
+  },
+  "version": "1.0.1",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "stack-and-dns-mcp",
+      "version": "1.0.1",
+      "runtimeHint": "npx",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "STACKDNS_USAGE_FILE",
+          "description": "Usage file path (default ./data/usage.json, relative to the client's working directory; absolute path recommended).",
+          "isRequired": false,
+          "isSecret": false
+        },
+        {
+          "name": "STACKDNS_DB_FILE",
+          "description": "SQLite database for stored scans, bulk checks and monitoring (default ./data/stackdns.db; absolute path recommended, none disables storage).",
+          "isRequired": false,
+          "isSecret": false
+        },
+        {
+          "name": "STACKDNS_DNS_SERVERS",
+          "description": "Comma-separated DNS resolvers: ip, ipv4:port, [ipv6]:port or [ipv4]:port, port 1-65535 (optional; default: system resolvers; anything else stops startup).",
+          "isRequired": false,
+          "isSecret": false
+        },
+        {
+          "name": "STACKDNS_LOG_LEVEL",
+          "description": "Log level, written to stderr (server default info; warn recommended for MCP clients).",
+          "isRequired": false,
+          "isSecret": false,
+          "default": "warn",
+          "choices": ["debug", "info", "warn", "error", "silent"]
+        }
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.example.com/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer sdm_live_... API key, or a session token issued after an HTTP 402 payment.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

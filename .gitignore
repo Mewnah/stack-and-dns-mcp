@@ -1,0 +1,15 @@
+node_modules/
+dist/
+# Runtime data (usage file, database) at the project root only: src/data/ holds source files.
+/data/
+.env
+.env.*
+!.env.example
+# Key files and secrets written next to the project (keys:generate --json prints raw keys).
+/keys.json
+/new-keys.json
+*.secret
+*.log
+.DS_Store
+coverage/
+*.stackdump

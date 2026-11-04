@@ -1,0 +1,78 @@
+{
+  "name": "stack-and-dns-mcp",
+  "version": "1.0.1",
+  "description": "Monetized MCP server that inspects a domain's web tech stack, email deliverability (SPF/DKIM/DMARC/MX), and security posture for AI agents.",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "stack-and-dns-mcp": "dist/index.js"
+  },
+  "mcpName": "io.github.Mewnah/stack-and-dns-mcp",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mewnah/stack-and-dns-mcp.git"
+  },
+  "homepage": "https://github.com/Mewnah/stack-and-dns-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/Mewnah/stack-and-dns-mcp/issues"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "server.json"
+  ],
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "build": "npm run clean && tsc -p tsconfig.json",
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
+    "dev": "tsx src/index.ts",
+    "dev:http": "tsx src/index.ts --http",
+    "start": "node dist/index.js",
+    "start:http": "node dist/index.js --http",
+    "start:env": "node --env-file=.env dist/index.js",
+    "test": "node --import tsx --test test/*.test.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.test.json",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "inspector": "npx @modelcontextprotocol/inspector node dist/index.js",
+    "keys:generate": "tsx src/cli/generate-key.ts",
+    "settlements": "tsx src/cli/settlements.ts",
+    "smoke": "tsx scripts/smoke.ts",
+    "prepublishOnly": "npm run clean && npm run build && npm test"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "tech-stack",
+    "dns",
+    "spf",
+    "dkim",
+    "dmarc",
+    "email-deliverability",
+    "security-headers",
+    "ai-agents",
+    "sdr",
+    "monetized",
+    "x402",
+    "stripe"
+  ],
+  "author": "Mewnah",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "express": "^5.2.1",
+    "proxy-addr": "^2.0.7",
+    "undici": "^7.16.0",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^22.20.3",
+    "prettier": "3.9.9",
+    "tsx": "^4.23.13",
+    "typescript": "^5.9.3"
+  }
+}
