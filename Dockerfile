@@ -24,7 +24,7 @@ USER mcp
 EXPOSE 3333
 VOLUME ["/data"]
 # Probes the port the server actually listens on (PORT wins over STACKDNS_PORT, as in config.ts),
-# and passes in stdio mode (Smithery runs this image with STACKDNS_TRANSPORT=stdio), which has no
+# and passes when the image runs in stdio mode (STACKDNS_TRANSPORT=stdio), which has no
 # HTTP listener. Docker does not expand variables here; the shell does, at run time.
 HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
   CMD test "${STACKDNS_TRANSPORT:-http}" = "stdio" || wget -qO- "http://127.0.0.1:${PORT:-${STACKDNS_PORT:-3333}}/healthz" >/dev/null || exit 1

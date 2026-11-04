@@ -1206,12 +1206,9 @@ per-instance quotas). Overlapping processes that share the database file are saf
    `mcp-publisher login github`, `mcp-publisher validate` and `mcp-publisher publish`. The
    registry verifies ownership of the npm package through `mcpName` (keep it equal to `name`),
    and its schema limits `description` to 100 characters.
-3. **Smithery**: push the repo with [`smithery.yaml`](smithery.yaml) and claim it at
-   smithery.ai; the descriptor builds the Dockerfile and exposes `dnsServers`, `fetchTimeoutMs`
-   and `logLevel` as user settings.
-4. **Cursor directory / Claude connectors / Glama / PulseMCP / mcp.so**: submit the GitHub URL
+3. **Cursor directory / Claude connectors / Glama / PulseMCP / mcp.so**: submit the GitHub URL
    and the hosted `/mcp` endpoint; each directory reads `server.json` or the README config blocks.
-5. **Docker MCP Catalog**: submit the image built from the Dockerfile with the `--http` entrypoint.
+4. **Docker MCP Catalog**: submit the image built from the Dockerfile with the `--http` entrypoint.
 
 ---
 
